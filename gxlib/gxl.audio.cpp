@@ -234,7 +234,7 @@ iSoundPlayer::~iSoundPlayer()
 
 bool iSoundPlayer::HasAudioDev()
 {
-	WAVEFORMATEX wfex = {WAVE_FORMAT_PCM, 1, 22050, 44100, 4, 16, 0 };
+	WAVEFORMATEX wfex = {WAVE_FORMAT_PCM, 1, 22050, 44100, 2, 16, 0 };
 	HWAVEOUT hWaveOut = NULL;
 	if ( MMSYSERR_NOERROR != ::waveOutOpen( &hWaveOut, WAVE_MAPPER, &wfex, 0, 0, CALLBACK_NULL) ) {
 		return false;
@@ -251,7 +251,7 @@ bool iSoundPlayer::Init()
 
 	m_hWorkThread = ::CreateThread(NULL, 0, MixerThread, this, CREATE_SUSPENDED, &m_idWorkThread);
 
-	WAVEFORMATEX wfex = {WAVE_FORMAT_PCM, 1, 22050, 44100, 4, 16, 0 };
+	WAVEFORMATEX wfex = {WAVE_FORMAT_PCM, 1, 22050, 44100, 2, 16, 0 };
 	if ( MMSYSERR_NOERROR != ::waveOutOpen( &m_hWaveOut, WAVE_MAPPER, &wfex, m_idWorkThread, (DWORD)this, CALLBACK_THREAD ) ) {
 		check(0 == "Unable to open WaveOut device!");
 		return false;
