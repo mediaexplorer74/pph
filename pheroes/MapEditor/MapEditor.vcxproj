@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Unicode|Win32">
+      <Configuration>Debug_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Unicode|Win32">
+      <Configuration>Release_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{C7E2DD29-C05E-4BB5-9661-B82CC8B5BBA0}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <OutDir>.\..\bin\</OutDir>
+    <IntDir>.\..\obj\MapEditor_w32.wdbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <OutDir>.\..\obj\MapEditor_w32.wrel\</OutDir>
+    <IntDir>.\..\obj\MapEditor_w32.wrel\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\wtl10;..\common;.;..\..\iolib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\obj\MapEditor_w32.wdbg\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\obj\MapEditor_w32.wdbg\MapEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\obj\MapEditor_w32.wdbg\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\obj\MapEditor_w32.wdbg\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\obj\MapEditor_w32.wdbg\MapEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\wtl10;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\obj\MapEditor_w32.wdbg\MapEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\bin\MapEditor.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\common;.;..\..\iolib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\obj\MapEditor_w32.wrel\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\obj\MapEditor_w32.wrel\MapEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\obj\MapEditor_w32.wrel\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\obj\MapEditor_w32.wrel\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\obj\MapEditor_w32.wrel\MapEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\obj\MapEditor_w32.wrel\MapEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\bin\MapEditor.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Army.cpp" />
+    <ClCompile Include="..\Common\cm_castles.cpp" />
+    <ClCompile Include="..\Common\cm_constructions.cpp" />
+    <ClCompile Include="..\Common\cm_creatures.cpp" />
+    <ClCompile Include="..\Common\cm_events.cpp" />
+    <ClCompile Include="..\Common\cm_magic.cpp" />
+    <ClCompile Include="..\Common\common.cpp" />
+    <ClCompile Include="..\Common\lzo.cpp" />
+    <ClCompile Include="..\Common\lzo\lzokay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Common\SpanMap.cpp" />
+    <ClCompile Include="..\Common\treasury_cnst.cpp" />
+    <ClCompile Include="..\Common\xau\xau.audio.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.block.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.codec.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.dct.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.huff.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.quant.cpp" />
+    <ClCompile Include="Artifacts.cpp" />
+    <ClCompile Include="AvatarMgr.cpp" />
+    <ClCompile Include="ChildDlgs.cpp" />
+    <ClCompile Include="Commands.cpp" />
+    <ClCompile Include="Composer.cpp" />
+    <ClCompile Include="Constructions.cpp" />
+    <ClCompile Include="defines.cpp" />
+    <ClCompile Include="ExportDlg.cpp" />
+    <ClCompile Include="MainView.cpp" />
+    <ClCompile Include="MapEditor.cpp" />
+    <ClCompile Include="MapGen.cpp" />
+    <ClCompile Include="MapHandler.cpp" />
+    <ClCompile Include="MapValidateDlg.cpp" />
+    <ClCompile Include="MinimapView.cpp" />
+    <ClCompile Include="objects.cpp" />
+    <ClCompile Include="PropertyPages.cpp" />
+    <ClCompile Include="resmgr.cpp" />
+    <ClCompile Include="SoundMgr.cpp" />
+    <ClCompile Include="SpriteMgr.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TextMgr.cpp" />
+    <ClCompile Include="TextResDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Army.h" />
+    <ClInclude Include="..\Common\cm_castles.h" />
+    <ClInclude Include="..\Common\cm_constructions.h" />
+    <ClInclude Include="..\Common\cm_creatures.h" />
+    <ClInclude Include="..\Common\cm_events.h" />
+    <ClInclude Include="..\Common\cm_magic.h" />
+    <ClInclude Include="..\Common\common.h" />
+    <ClInclude Include="..\Common\isometric.h" />
+    <ClInclude Include="..\Common\lzo.h" />
+    <ClInclude Include="..\Common\lzo\lzokay.hpp" />
+    <ClInclude Include="..\Common\objdef.h" />
+    <ClInclude Include="..\Common\rtti.h" />
+    <ClInclude Include="..\Common\serialize.h" />
+    <ClInclude Include="..\Common\SpanMap.h" />
+    <ClInclude Include="..\Common\treasury_cnst.h" />
+    <ClInclude Include="..\Common\xau\xau.audio.h" />
+    <ClInclude Include="..\Common\xau\xau.cfg.h" />
+    <ClInclude Include="..\Common\xau\xau.ppf.h" />
+    <ClInclude Include="..\Common\xau\xau.ppf.impl.h" />
+    <ClInclude Include="..\Common\xau\xau.rice.h" />
+    <ClInclude Include="..\Common\xau\xau.rice.impl.h" />
+    <ClInclude Include="..\Common\xau\xbs.bs.h" />
+    <ClInclude Include="..\Common\xau\xbs.bs.impl.h" />
+    <ClInclude Include="..\Common\xau\xbs.bswap.h" />
+    <ClInclude Include="..\Common\xau\xbs.cfg.h" />
+    <ClInclude Include="..\Common\xau\xbs.math.h" />
+    <ClInclude Include="..\Common\xau\xjp.block.h" />
+    <ClInclude Include="..\Common\xau\xjp.boot.h" />
+    <ClInclude Include="..\Common\xau\xjp.codec.h" />
+    <ClInclude Include="..\Common\xau\xjp.dct.h" />
+    <ClInclude Include="..\Common\xau\xjp.huff.h" />
+    <ClInclude Include="..\Common\xau\xjp.huff.impl.h" />
+    <ClInclude Include="..\Common\xau\xjp.quant.h" />
+    <ClInclude Include="..\Common\xau\xjp.swizzle.h" />
+    <ClInclude Include="Artifacts.h" />
+    <ClInclude Include="AvatarMgr.h" />
+    <ClInclude Include="ChildDlgs.h" />
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="Composer.h" />
+    <ClInclude Include="Constructions.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="ExportDlg.h" />
+    <ClInclude Include="ifaces.h" />
+    <ClInclude Include="Items.h" />
+    <ClInclude Include="mainfrm.h" />
+    <ClInclude Include="MainView.h" />
+    <ClInclude Include="MapGen.h" />
+    <ClInclude Include="MapHandler.h" />
+    <ClInclude Include="MapValidateDlg.h" />
+    <ClInclude Include="MinimapView.h" />
+    <ClInclude Include="NewMapDlg.h" />
+    <ClInclude Include="Nodes.h" />
+    <ClInclude Include="objects.h" />
+    <ClInclude Include="PropertyPages.h" />
+    <ClInclude Include="resmgr.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SoundMgr.h" />
+    <ClInclude Include="SpriteMgr.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TextMgr.h" />
+    <ClInclude Include="TextResDlg.h" />
+    <ClInclude Include="UltimatePropsDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\folder.bmp" />
+    <Image Include="res\maintb24.bmp" />
+    <Image Include="res\MapEditor.ico" />
+    <Image Include="res\surftb24.bmp" />
+    <Image Include="res\toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\toolbar2.bmp" />
+    <Image Include="res\tree_clp.bmp" />
+    <Image Include="res\tree_exp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\MapEditor.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MapEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\iolib\He\He.vcxproj">
+      <Project>{79658563-82ea-4b7f-8fbb-dc67a4545d35}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iolib\Li\Li.vcxproj">
+      <Project>{6ad42369-a231-4be6-958f-3957685b58d2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iolib\Pa\Pa.vcxproj">
+      <Project>{5d6cc2d9-497e-4f14-bbc1-8e33943c4ef5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iolib\Si\Si.vcxproj">
+      <Project>{b060bab0-0a83-4f94-beee-e9c998f396a1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iolib\Xe\Xe.vcxproj">
+      <Project>{c38a3df4-4d52-4400-af8a-45c89378a1e5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b1d57eaf-962c-4392-9208-299e30da52c3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Interface">
+      <UniqueIdentifier>{ccc685c7-82a7-4098-bb1d-6d7f0ead787a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interface\Dialogs">
+      <UniqueIdentifier>{8e1c35da-a463-4792-b09e-3abd77103397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameCore">
+      <UniqueIdentifier>{4a87d7ec-f2bd-47f1-a438-310d2f224bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameCore\Resources">
+      <UniqueIdentifier>{a6e480fc-882f-4e64-8be6-eb4e7f073da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameCore\Items">
+      <UniqueIdentifier>{6f36d237-fc36-41fa-a230-a91cf5c3d559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameCore\AI">
+      <UniqueIdentifier>{79c58390-781e-4725-86c8-4c935c351226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Overland">
+      <UniqueIdentifier>{b5817030-64fb-4389-bd28-f579097dacff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Castle">
+      <UniqueIdentifier>{400a3a82-b514-4468-bdc4-f937d5b4b57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hero">
+      <UniqueIdentifier>{8347e004-4cbf-4a36-8f9d-e98d16e0ea24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Minimap">
+      <UniqueIdentifier>{aeeed35a-6dff-40fd-8bc5-07d6d30f29d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Battle">
+      <UniqueIdentifier>{910d9d4a-cbfa-48c3-bec8-f97c0ab13f18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game menu">
+      <UniqueIdentifier>{abef528e-cb82-4a2d-bf9e-7d509356653e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GXLIB">
+      <UniqueIdentifier>{fcdb03e7-283a-431e-b126-639273baaeda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GXLIB\GUI">
+      <UniqueIdentifier>{263a250b-f3f7-4918-8bce-90c95c3fd511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{f9e21044-b2aa-4c67-aa90-c3bc6c3d62ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\lzo">
+      <UniqueIdentifier>{8684d75e-b157-4425-b7d6-50d6d84d703c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\xau">
+      <UniqueIdentifier>{2b77c10d-f4b9-4bda-9c09-780ca0e778d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d37b1c03-8581-43af-a6b2-075cf294d1db}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dlg_ArmyRoom.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_ArtInfo.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_BattleHero.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_BattleLog.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_BattleResult.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_CapArt.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_CastSpell.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Chest.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_CreatInfo.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_FightGuard.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_HallOfFame.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_KingdomOverview.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_LeaveGuards.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Level.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Message.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_MLInfo.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_NewWeek.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Other.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_PuzzleMap.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Recruit.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Rewards.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_RiseSkeletons.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Save.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_ScenList.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_ScenProps.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_Settings.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_SkillInfo.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_SpellInfo.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_SplitCreatures.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_SurrenderCond.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_TimeEvent.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_TownList.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_WitchHut.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMenuDlg.cpp">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ArmyList.cpp">
+      <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtifactList.cpp">
+      <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonControls.cpp">
+      <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonDialogs.cpp">
+      <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellListView.cpp">
+      <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="AvatarMgr.cpp">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="GfxManager.cpp">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemMgr.cpp">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="SfxManager.cpp">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Artifacts.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="CastleCnsts.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Castles.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructions.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="hero.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Magic.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="objects.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="ai.cpp">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="ai.dmap.cpp">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="ai.explore.cpp">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="ai.scanner.cpp">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="dbg.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="fogmap.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="GfxHlp.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="helpers.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinding.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundMap.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TextComposer.cpp">
+      <Filter>Source Files\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="AniObject.cpp">
+      <Filter>Source Files\Overland</Filter>
+    </ClCompile>
+    <ClCompile Include="Composer.cpp">
+      <Filter>Source Files\Overland</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlandView.cpp">
+      <Filter>Source Files\Overland</Filter>
+    </ClCompile>
+    <ClCompile Include="PopupDlg.cpp">
+      <Filter>Source Files\Overland</Filter>
+    </ClCompile>
+    <ClCompile Include="CastleView.cpp">
+      <Filter>Source Files\Castle</Filter>
+    </ClCompile>
+    <ClCompile Include="HeroView.cpp">
+      <Filter>Source Files\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="MeetView.cpp">
+      <Filter>Source Files\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimapView.cpp">
+      <Filter>Source Files\Minimap</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoBattle.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleAI.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleEngine.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleFort.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleInfo.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleObstacles.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattlePF.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleUnit.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleView.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg_ChooseBattleGroup.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="iBattleGroupBtn.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="InteractBattle.cpp">
+      <Filter>Source Files\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Credits.cpp">
+      <Filter>Source Files\Game menu</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroDlg.cpp">
+      <Filter>Source Files\Game menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuView.cpp">
+      <Filter>Source Files\Game menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hmm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.dialog.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.popupview.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.stdctrl.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.topmostview.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.view.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.viewmgr.cpp">
+      <Filter>GXLIB\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.application.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.audio.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.cmdline.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.common.def.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.config.file.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.dib.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.dib.fx.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.dib.loader.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.dib.transform.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.dibfont.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.display.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.file.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.input.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.logmgr.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.math.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gxlib\gxl.memdbg.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.metrics.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GXLIB\gxl.window.cpp">
+      <Filter>GXLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\lzo.cpp">
+      <Filter>Common\lzo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xau.audio.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.block.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.codec.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.dct.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.huff.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.quant.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Army.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_castles.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_constructions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_creatures.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_events.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_magic.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\lang_eng.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SpanMap.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\treasury_cnst.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\lzo\lzokay.cpp">
+      <Filter>Common\lzo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dlg_ArmyRoom.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_ArtInfo.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_BattleHero.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_BattleLog.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_BattleResult.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_CapArt.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_CastSpell.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Chest.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_CreatInfo.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_FightGuard.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_HallOfFame.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_KingdomOverview.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_LeaveGuards.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Level.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Message.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_MLInfo.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_NewWeek.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Other.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_PuzzleMap.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Recruit.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Rewards.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_RiseSkeletons.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Save.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_ScenList.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_ScenProps.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_Settings.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_SkillInfo.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_SpellInfo.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_SplitCreatures.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_SurrenderCond.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_TimeEvent.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_TownList.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_WitchHut.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenuDlg.h">
+      <Filter>Source Files\Interface\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ArmyList.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtifactList.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonControls.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDialogs.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellListView.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewDefs.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarMgr.h">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="GfxManager.h">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemMgr.h">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="SfxManager.h">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>Source Files\GameCore\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Artifacts.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleCnsts.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Castles.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Constructions.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="hero.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Magic.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Source Files\GameCore\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="ai.explore.h">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="ai.h">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="ai.scanner.h">
+      <Filter>Source Files\GameCore\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="dbg.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="fogmap.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="GfxHlp.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinding.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundMap.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="TextComposer.h">
+      <Filter>Source Files\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="AniObject.h">
+      <Filter>Source Files\Overland</Filter>
+    </ClInclude>
+    <ClInclude Include="Composer.h">
+      <Filter>Source Files\Overland</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlandView.h">
+      <Filter>Source Files\Overland</Filter>
+    </ClInclude>
+    <ClInclude Include="PopupDlg.h">
+      <Filter>Source Files\Overland</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleView.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctl_CnstPage.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctl_MarketPage.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctl_MGuildPage.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctl_RecrPage.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctl_TavernPage.h">
+      <Filter>Source Files\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero_Army.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero_Artifacts.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero_Skills.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero_Spells.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="HeroView.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="MeetView.h">
+      <Filter>Source Files\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimapView.h">
+      <Filter>Source Files\Minimap</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoBattle.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleAI.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleEngine.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleFort.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleInfo.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleObstacles.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattlePF.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleUnit.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleView.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg_ChooseBattleGroup.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="iBattleGroupBtn.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="InteractBattle.h">
+      <Filter>Source Files\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Credits.h">
+      <Filter>Source Files\Game menu</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroDlg.h">
+      <Filter>Source Files\Game menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuView.h">
+      <Filter>Source Files\Game menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hmm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.dialog.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.popupview.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.stdctrl.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.topmostview.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.view.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.viewmgr.h">
+      <Filter>GXLIB\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.application.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.audio.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.cmdline.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.common.def.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.common.tpl.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.config.file.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.array.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.ctr.cbuff.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.farray.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.list.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.map.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.debug.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.dib.cache.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.dib.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.dibfont.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.display.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.file.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.fixpoint.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.font.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.inc.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.input.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.logmgr.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.math.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.memdc.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.memory.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.metrics.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.pair.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gxlib\gxl.rnd.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.smartptr.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.string.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.string.std.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.timer.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.vector.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GXLIB\gxl.window.h">
+      <Filter>GXLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\lzo.h">
+      <Filter>Common\lzo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.audio.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.cfg.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.math.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.ppf.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.ppf.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.rice.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.rice.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bs.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bs.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bswap.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.cfg.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.math.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.block.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.boot.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.codec.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.dct.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.huff.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.huff.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.quant.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.swizzle.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Army.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_castles.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_creatures.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_events.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_magic.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cnst_gfx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cnst_text.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\isometric.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\rtti.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\serialize.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SortArray.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SpanMap.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\lzo\lzokay.hpp">
+      <Filter>Common\lzo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\features.old.txt" />
+    <Text Include="..\features.txt" />
+    <Text Include="..\readme.txt" />
+  </ItemGroup>
+</Project>

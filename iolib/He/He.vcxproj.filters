@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Root">
+      <UniqueIdentifier>{bdbb68be-2ed0-4355-ba44-5bdbfc748e78}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{b9c0c593-2c97-4a2b-8b27-f0dc34fdf98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{d26c464d-ff74-4d10-8699-7bfbbd674210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{975c74ae-b16b-4092-b67a-93e634772c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metrics">
+      <UniqueIdentifier>{faa9876d-0147-47ec-9359-6a2ba1dd3b87}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="he.buff.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.console.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.debug.log.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.defines.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.fixpoint.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.handle.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.ipc.anpipes.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.ipc.nmpipes.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.localization.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.net.address.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.net.blocksock.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.pair.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.smartptr.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.std.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.string.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.string.std.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.tables.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.wnd.helpers.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.cache.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.fast.array.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.fast.ilist.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.hash.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.map.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.simple.array.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.simple.map.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.container.tree.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="he.cpuf.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="he.memory.compress.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="he.memory.dynbuff.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="he.memory.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="he.threads.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="he.crc32.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="he.file.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="he.file.name.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="he.file.std.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="he.inifile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="he.metrics.h">
+      <Filter>Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="he.range.h">
+      <Filter>Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="he.types.h">
+      <Filter>Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="he.vector.h">
+      <Filter>Metrics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="he.debug.log.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="he.localization.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="he.std.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="he.string.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="he.tables.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="he.cpuf.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="he.memory.compress.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="he.memory.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="he.threads.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="he.crc32.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="he.file.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="he.file.name.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="he.metrics.cpp">
+      <Filter>Metrics</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

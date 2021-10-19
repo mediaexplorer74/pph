@@ -27,10 +27,10 @@
 #define AFX_STDAFX_H__2C202E81_3FBB_46B6_89B2_DC5848BED462__INCLUDED_
 
 // Change these values to use different versions
-#define WINVER		0x0400
+//#define WINVER		0x0400
 //#define _WIN32_WINNT	0x0400
-#define _WIN32_IE	0x0400
-#define _RICHEDIT_VER	0x0100
+//#define _WIN32_IE	0x0400
+//#define _RICHEDIT_VER	0x0100
 
 #include <atlbase.h>
 #include <atlapp.h>
@@ -45,12 +45,12 @@ extern CAppModule _Module;
 #include <atlctrlw.h>
 #include <atlsplit.h>
 
-#include "he/he.std.h"
-#include "xe/xe.std.h"
-#include "li/li.std.h"
-#include "li/li.cmndlg.h"
-#include "si/si.std.h"
-#include "si/si.wctrl.tree.h"
+#include "../../../iolib/he/he.std.h"
+#include "../../../iolib/xe/xe.std.h"
+#include "../../../iolib/li/li.std.h"
+#include "../../../iolib/li/li.cmndlg.h"
+#include "../../../iolib/si/si.std.h"
+#include "../../../iolib/si/si.wctrl.tree.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

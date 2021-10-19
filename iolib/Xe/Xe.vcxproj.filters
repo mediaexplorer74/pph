@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{dda57a50-3495-4528-88ac-872eb7d22b26}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="PNG">
+      <UniqueIdentifier>{221a7082-6244-407a-9ecf-26b11e1a1776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PNG\ZLIB">
+      <UniqueIdentifier>{b1911bd9-0696-4326-a907-3ed8ec98e44a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xe.color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.8bit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.dchandl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.filters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.fx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.grayhandl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.llproc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.mem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.primitives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.saver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xe.dib.transform.fscale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\adler32.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\compress.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\crc32.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\deflate.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\infblock.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\infcodes.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\inffast.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\inflate.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\inftrees.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\infutil.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\maketree.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\trees.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\uncompr.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\zlib\zutil.c">
+      <Filter>PNG\ZLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\png.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngerror.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pnggccrd.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngget.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngmem.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngpread.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngread.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngrio.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngrtran.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngrutil.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngset.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngtrans.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngvcrd.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngwio.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngwrite.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngwtran.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="PNG\lpng125\pngwutil.c">
+      <Filter>PNG</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xe.color.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.cursor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dc.hlp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dib.8bit.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dib.cache.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.dib.llproc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.font.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.gray.dib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.memorydc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xe.std.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\deflate.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\infblock.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\infcodes.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\inffast.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\inffixed.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\inftrees.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\infutil.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\trees.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\zconf.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\zlib.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\zlib\zutil.h">
+      <Filter>PNG\ZLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\lpng125\png.h">
+      <Filter>PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\lpng125\pngasmrd.h">
+      <Filter>PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="PNG\lpng125\pngconf.h">
+      <Filter>PNG</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -19,7 +19,7 @@
  */ 
 
 #include "stdafx.h"
-#include "lzo/minilzo.h"
+#include "lzo/lzokay.hpp"
 #include "lzo.h"
 
 namespace LZO {
@@ -29,23 +29,19 @@ const uint32 LZO_MAX_BUF_LEN = 4 * 1024 * 1024;
 
 bool Init()
 {
-	return (lzo_init() == LZO_E_OK);
+	return true;
 }
 
-
-#define HEAP_ALLOC(var,size) \
-    lzo_align_t __LZO_MMODEL var [ ((size) + (sizeof(lzo_align_t) - 1)) / sizeof(lzo_align_t) ]
-static HEAP_ALLOC(wrkmem,LZO1X_1_MEM_COMPRESS);
+lzokay::Dict<> dict;
 
 uint32 Compress(const unsigned char* rawBuff, uint32 rawBuffLen, iDynamicBuffer& lzoBuff)
 {
 	check(rawBuffLen > 0 && rawBuffLen <= LZO_MAX_BUF_LEN);
-	unsigned long out_len = (rawBuffLen + rawBuffLen / 16 + 64 + 3);
+	uint32 out_len = lzokay::compress_worst_size(rawBuffLen);
 	unsigned char* buff = new unsigned char[out_len];
 
-	// compress from `in' to `out' with LZO1X-1
-    int res = lzo1x_1_compress(rawBuff,rawBuffLen,buff,&out_len,wrkmem);
-    if (res != LZO_E_OK) {
+	lzokay::EResult res = lzokay::compress(rawBuff,rawBuffLen,buff,out_len,out_len,dict);
+    if (res != lzokay::EResult::Success) {
         // this should NEVER happen
 		delete[] buff;
 		check(0);
@@ -71,8 +67,8 @@ uint32 Decompress(const unsigned char* lzoBuff, uint32 lzoBuffLen, iDynamicBuffe
 		return 0;
 	}
 
-	unsigned long raw_buf_len;
-	memcpy(&raw_buf_len, lzoBuff, sizeof(unsigned long));
+	uint32 raw_buf_len;
+	memcpy(&raw_buf_len, lzoBuff, sizeof(uint32));
 	lzoBuffLen -=  sizeof(uint32);
 	lzoBuff += sizeof(uint32);
 	if (raw_buf_len <= 0 || raw_buf_len > LZO_MAX_BUF_LEN) {
@@ -82,8 +78,8 @@ uint32 Decompress(const unsigned char* lzoBuff, uint32 lzoBuffLen, iDynamicBuffe
 
 	rawBuff.ReInit(raw_buf_len);
 	rawBuff.IncSize( raw_buf_len );
-    int res = lzo1x_decompress(lzoBuff,lzoBuffLen,(unsigned char*)rawBuff.GetData(),&raw_buf_len,NULL);
-	if (res != LZO_E_OK) {
+	lzokay::EResult res = lzokay::decompress(lzoBuff,lzoBuffLen,(unsigned char*)rawBuff.GetData(),raw_buf_len,raw_buf_len);
+	if (res != lzokay::EResult::Success) {
 		check(0);
 		return 0;
 	}

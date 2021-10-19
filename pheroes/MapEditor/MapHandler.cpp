@@ -59,7 +59,8 @@ iMapHandler::~iMapHandler()
 
 void iMapHandler::ClearMap()
 {
-	for (uint32 xx=0; xx<PID_COUNT; ++xx){
+	uint32 xx;
+	for (xx=0; xx<PID_COUNT; ++xx){
 		if (m_pPlayers[xx]){
 			delete m_pPlayers[xx];
 			m_pPlayers[xx] = NULL;
@@ -479,7 +480,8 @@ void iMapHandler::AddPlayer(PLAYER_ID pid, PLAYER_TYPE_MASK ptm)
 
 bool iMapHandler::CanDeletePlayer(PLAYER_ID pid) const
 {
-	for (uint32 xx=0; xx<m_HeroList.GetSize(); ++xx) if (m_HeroList[xx]->Owner() == pid) return false;
+	uint32 xx;
+	for (xx=0; xx<m_HeroList.GetSize(); ++xx) if (m_HeroList[xx]->Owner() == pid) return false;
 	for (xx=0; xx<m_HeroList.GetSize(); ++xx) if (m_OwnCnstList[xx]->Owner() == pid) return false;
 	for (xx=0; xx<m_HeroList.GetSize(); ++xx) if (m_CastleList[xx]->Owner() == pid) return false;
 	return true;
@@ -676,7 +678,8 @@ void iMapHandler::RemoveMapObject(iBaseMapObject* pObj)
 iBaseMapObject* iMapHandler::GetCellObject(const iPoint& pos)
 {
 	// Heroes
-	for (uint32 xx=0; xx<m_HeroList.GetSize(); ++xx){
+	uint32 xx;
+	for (xx=0; xx<m_HeroList.GetSize(); ++xx){
 		if (m_HeroList[xx]->Pos() == pos){
 			return m_HeroList[xx];
 		}
@@ -1307,7 +1310,8 @@ bool SaveMapToFile(iMapHandler& map, const iStringT& fname)
 		fileBuff.Write(map.m_radUltimateArt);
 		// Players
 		iSimpleArray<iPlayer*> pPlayers;
-		for (uint32 pid=PID_RED; pid<PID_COUNT; ++pid) {
+		uint32 pid;
+		for (pid=PID_RED; pid<PID_COUNT; ++pid) {
 			if (map.m_pPlayers[pid]) pPlayers.Add(map.m_pPlayers[pid]);
 		}
 		fileBuff.Write((uint16)pPlayers.GetSize());

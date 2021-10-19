@@ -283,7 +283,8 @@ public:
 		::GetTextExtentPoint(m_hDC,dots.CStr(),dots.Length(),&siz);
 		int nAddLen = siz.cx;
 
-		for(int i = nStringLen-1; i > 0; i--) {
+		int i;
+		for(i = nStringLen-1; i > 0; i--) {
 			::GetTextExtentPoint(m_hDC,result.Left(i).CStr(),result.Left(i).Length(),&siz);
 			if((siz.cx + nOffset + nAddLen) <= nColumnLen) {
 				break;

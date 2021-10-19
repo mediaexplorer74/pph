@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Root">
+      <UniqueIdentifier>{65b203d8-8a13-4773-8400-e869de151bab}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Root\NW_Controls">
+      <UniqueIdentifier>{d96cac0b-2ce2-4625-a445-63c76889c40c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Root\WND_Controls">
+      <UniqueIdentifier>{7f22c139-324e-4a04-98b1-af499f494c0d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="si.nwcontrol.base.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.base.ttip.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.button.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.label.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.popupbtn.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.sbutton.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.slider.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.swbutton.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.nwcontrol.tab.cpp">
+      <Filter>Root\NW_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.wctrl.tree.cpp">
+      <Filter>Root\WND_Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="si.osspec.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.basenw.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.frame.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.generic.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.popup.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.popupmenu.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+    <ClCompile Include="si.window.topmost.cpp">
+      <Filter>Root</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="si.nwcontrol.base.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.base.ttip.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.button.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.flatsbar.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.label.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.popupbtn.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.sbutton.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.slider.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.swbutton.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwcontrol.tab.h">
+      <Filter>Root\NW_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.wctrl.tree.h">
+      <Filter>Root\WND_Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="si.common.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.nwinterfaces.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.osspec.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.std.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.tooltip.disp.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.basenw.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.frame.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.generic.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.popup.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.popupmenu.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.window.topmost.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="si.winmgr.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

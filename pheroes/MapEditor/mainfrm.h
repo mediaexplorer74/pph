@@ -87,7 +87,8 @@ public:
 		UIEnable(ID_VIEW_PASSMAP,m_Map.IsInited());
 		UISetCheck(ID_VIEW_PASSMAP, m_MainView.m_Composer.IsShowPassMap());
 		
-		for (sint32 xx=0; xx<4; ++xx) {
+		sint32 xx;
+		for (xx=0; xx<4; ++xx) {
 			UISetCheck(ID_TOOL_EDIT+xx, (m_MainView.m_NavMode == xx));
 		}
 

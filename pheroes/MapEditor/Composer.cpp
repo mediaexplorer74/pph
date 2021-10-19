@@ -136,7 +136,8 @@ void iComposer::ComposeAvatar(const iAvatar& avt, const iPoint& pos, bool bShado
 	iSpriteMgr& spriteMgr = gItemMgr.m_SpriteMgr;
 
 	// Shadow
-	for (uint32 sid=0; sid<avt.SpritesCount(); ++sid) {
+	uint32 sid;
+	for (sid=0; sid<avt.SpritesCount(); ++sid) {
 		const iSprite* pSprite = spriteMgr.GetSpritePtr(avt.SpriteEntry(sid).spriteId);
 		if (bShadow && pSprite->shadow) ComposeShadow(pSprite->dib,m_ComposeMemDC.m_Dib,pos + pSprite->anchor + avt.SpriteEntry(sid).anchor);
 	}
@@ -185,7 +186,8 @@ void iComposer::Compose(HDC hdc, const iSize& siz, const iPoint &offset, const i
 	m_ComposeMemDC.m_Dib.Fill(cColorBlue64);
 	// 
 	// Surface and grid
-	for (sint32 yy=0; yy<cnt_y; ++yy) {
+	sint32 yy;
+	for (yy=0; yy<cnt_y; ++yy) {
 		for (sint32 xx=0; xx<cnt_x; ++xx){
 			if (m_pMap->IsValidPos(map_coor.x,map_coor.y)){
 				sint32 xpos = xx*step_x;

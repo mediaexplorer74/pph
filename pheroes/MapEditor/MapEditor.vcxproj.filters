@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ef8f3123-6fd3-4794-98d2-e6f1731fcbe7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Res">
+      <UniqueIdentifier>{550fc79e-7ba6-4643-a2ec-519c64c676ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Export">
+      <UniqueIdentifier>{53e9a38d-bd10-4dac-ab1f-e76c2d3114f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Property Dialogs">
+      <UniqueIdentifier>{c034ad38-5300-41a3-b10a-d8862566e6bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{23f354ca-eede-4717-a799-38ccdf07da40}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{92c9eb8d-2226-4ed4-ab94-4a8a112a4bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\lzo">
+      <UniqueIdentifier>{2c385a37-72a0-4124-be81-fe006320a0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\xau">
+      <UniqueIdentifier>{67dcd952-0533-49af-88b1-4e3626f6ef9f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Artifacts.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="AvatarMgr.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructions.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="defines.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="objects.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="resmgr.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundMgr.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteMgr.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="TextMgr.cpp">
+      <Filter>Source Files\Res</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportDlg.cpp">
+      <Filter>Source Files\Export</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyPages.cpp">
+      <Filter>Source Files\Property Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildDlgs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Composer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapGen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapValidateDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimapView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextResDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\lzo.cpp">
+      <Filter>Common\lzo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xau.audio.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.block.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.codec.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.dct.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.huff.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\xau\xjp.quant.cpp">
+      <Filter>Common\xau</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Army.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_castles.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_constructions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_creatures.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_events.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cm_magic.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SpanMap.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\treasury_cnst.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\lzo\lzokay.cpp">
+      <Filter>Common\lzo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Artifacts.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="AvatarMgr.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="Constructions.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="Items.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="Nodes.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="resmgr.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundMgr.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteMgr.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="TextMgr.h">
+      <Filter>Source Files\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportDlg.h">
+      <Filter>Source Files\Export</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyPages.h">
+      <Filter>Source Files\Property Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildDlgs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Composer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ifaces.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfrm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainView.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapGen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapHandler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapValidateDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimapView.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewMapDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextResDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UltimatePropsDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\lzo.h">
+      <Filter>Common\lzo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.audio.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.cfg.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.ppf.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.ppf.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.rice.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xau.rice.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bs.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bs.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.bswap.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.cfg.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xbs.math.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.block.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.boot.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.codec.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.dct.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.huff.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.huff.impl.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.quant.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\xau\xjp.swizzle.h">
+      <Filter>Common\xau</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Army.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_castles.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_constructions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_creatures.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_events.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cm_magic.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\isometric.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\objdef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\rtti.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\serialize.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SpanMap.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\treasury_cnst.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\lzo\lzokay.hpp">
+      <Filter>Common\lzo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\folder.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\maintb24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MapEditor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\surftb24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tree_clp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tree_exp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\MapEditor.exe.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MapEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\readme.txt" />
+  </ItemGroup>
+</Project>

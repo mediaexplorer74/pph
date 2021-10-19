@@ -27,7 +27,8 @@ void ComposeVisualObject(iVisualObject& obj, iDib& surf, const iRect& rect)
 	// Calculate object metrics
 	iRect rc;
 	iSpriteMgr& smgr = gItemMgr.m_SpriteMgr;
-	for (uint32 aid=0; aid<obj.AvatarsCount(); ++aid) {
+	uint32 aid;
+	for (aid=0; aid<obj.AvatarsCount(); ++aid) {
 		const iAvatar& avatar = gItemMgr.m_AvatarMgr[obj.Avatar(aid).id];
 		iIsoMetric im(4);
 		iPoint avOffset = im.Map2Screen(obj.Avatar(aid).offset) - im.Map2Screen(iPoint());
@@ -74,7 +75,8 @@ void iItemBrowser::MakeObjectScheme(iVisualObject* pObj, iDib& dib)
 	iRect orc;
 	iSize cs(im.GetCellWidth(), im.GetCellHeight());
 	// Calculate size
-	for (uint32 xx=0; xx<pObj->AvatarsCount(); ++xx) {
+	uint32 xx;
+	for (xx=0; xx<pObj->AvatarsCount(); ++xx) {
 		orc += iRect(im.Map2Screen(pObj->Avatar(xx).offset),cs);
 	}
 	dib.Resize(orc.size());

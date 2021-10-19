@@ -457,7 +457,8 @@ bool iItemMgr::Init(const iStringT& fname)
 		if (!Sax::Parse( fname, &reader )) throw 0;
 
 		// Predefined resources
-		for (sint32 xx=-1; xx<MINERAL_COUNT; ++xx) m_pResNode->Add(new iMineralNode((MINERAL_TYPE)xx));
+		sint32 xx;
+		for (xx=-1; xx<MINERAL_COUNT; ++xx) m_pResNode->Add(new iMineralNode((MINERAL_TYPE)xx));
 		m_pResNode->Add(new iManaCrystalNode());
 		m_pResNode->Add(new iCampFireNode());
 		m_pResNode->Add(new iChestNode());

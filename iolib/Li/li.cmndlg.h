@@ -99,11 +99,14 @@ public:
 
 		m_ofn.lStructSize = sizeof(m_ofn);
 #if (_WIN32_WINNT >= 0x0500)
+		// AtlIsOldWindows is removed in WTL 10, current Windows can't be old
+#define AtlIsOldWindows() false
 		// adjust struct size if running on older version of Windows
 		if(AtlIsOldWindows()){
 			ATLASSERT(sizeof(m_ofn) > OPENFILENAME_SIZE_VERSION_400);	// must be
 			m_ofn.lStructSize = OPENFILENAME_SIZE_VERSION_400;
 		}
+#undef AtlIsOldWindows()
 #endif //(_WIN32_WINNT >= 0x0500)
 		m_ofn.lpstrFile = m_pFileName;
 		m_ofn.nMaxFile = MAX_FILENAME_SIZE;

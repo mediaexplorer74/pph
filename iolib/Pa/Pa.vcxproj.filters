@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2ee0f31-c62b-4a03-a786-69737b6654bf}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="libxml2">
+      <UniqueIdentifier>{c6479b55-a369-49ed-896d-78f8a300ec7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libxml2src">
+      <UniqueIdentifier>{b43da22f-19cf-4410-944a-98f3a2f8421e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pa.autovalue.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.convert.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.convert.utf8.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.convert.xml.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.except.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.map.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.sax.format.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.sax.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.sax.handler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.sax.parser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.sax.pathhandler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.serialize.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.variant.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa.xml.builder.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\c14n.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\catalog.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\debugXML.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\DOCBparser.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\encoding.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\entities.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\globals.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\hash.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\HTMLparser.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\HTMLtree.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\list.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\nanoftp.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\nanohttp.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\parser.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\parserInternals.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\SAX.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\tree.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\uri.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\valid.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xinclude.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xlink.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlautomata.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlerror.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlIO.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlmemory.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlversion.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xmlwin32version.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xpath.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xpathInternals.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml\xpointer.h">
+      <Filter>libxml2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pa.convert.utf8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pa.sax.parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pa.xml.builder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\c14n.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\catalog.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\debugXML.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\DOCBparser.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\encoding.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\entities.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\error.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\globals.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\hash.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\HTMLparser.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\HTMLtree.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\list.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\nanoftp.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\nanohttp.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\parser.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\parserInternals.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\SAX.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\threads.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\tree.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\uri.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\valid.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xinclude.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xlink.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xmlIO.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xmlmemory.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xpath.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+    <ClCompile Include="libxml\src\xpointer.c">
+      <Filter>libxml2src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

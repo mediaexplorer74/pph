@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Unicode|Win32">
+      <Configuration>Debug_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Unicode|Win32">
+      <Configuration>Release_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{8717CC99-960F-4E1A-A8ED-E73BF4E7FA20}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <OutDir>.\..\obj\HMM_w32.wrel\</OutDir>
+    <IntDir>.\..\obj\HMM_w32.wrel\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <OutDir>.\..\bin\Game\</OutDir>
+    <IntDir>.\..\obj\HMM_w32.wdbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\common;..\..\gxlib;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;UNICODE;OS_WIN32;_HMM_GAME_;DEV_VER;GAME_LANG_ENG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>.\..\obj\HMM_w32.wrel\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\obj\HMM_w32.wrel\HMM.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\obj\HMM_w32.wrel\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\obj\HMM_w32.wrel\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\obj\HMM_w32.wrel\HMM.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\obj\HMM_w32.wrel\HMM.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\bin\Game\HMM.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\common;..\..\gxlib;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;UNICODE;OS_WIN32;_HMM_GAME_;DEV_VER;GAME_LANG_ENG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\obj\HMM_w32.wdbg\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\obj\HMM_w32.wdbg\HMM.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\obj\HMM_w32.wdbg\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\obj\HMM_w32.wdbg\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\obj\HMM_w32.wdbg\HMM.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\obj\HMM_w32.wdbg\HMM.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\bin\Game\HMM.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\GXLIB\gxl.application.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.audio.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.cmdline.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.common.def.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.config.file.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.dialog.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.dib.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.dib.fx.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.dib.loader.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.dib.transform.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.dibfont.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.display.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.file.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.input.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.logmgr.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.math.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.memdbg.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.metrics.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.popupview.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.stdctrl.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.topmostview.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.view.cpp" />
+    <ClCompile Include="..\..\gxlib\gxl.viewmgr.cpp" />
+    <ClCompile Include="..\..\GXLIB\gxl.window.cpp" />
+    <ClCompile Include="..\Common\Army.cpp" />
+    <ClCompile Include="..\Common\cm_castles.cpp" />
+    <ClCompile Include="..\Common\cm_constructions.cpp" />
+    <ClCompile Include="..\Common\cm_creatures.cpp" />
+    <ClCompile Include="..\Common\cm_events.cpp" />
+    <ClCompile Include="..\Common\cm_magic.cpp" />
+    <ClCompile Include="..\Common\common.cpp" />
+    <ClCompile Include="..\Common\lang_eng.cpp" />
+    <ClCompile Include="..\Common\lzo.cpp" />
+    <ClCompile Include="..\Common\lzo\lzokay.cpp" />
+    <ClCompile Include="..\Common\SpanMap.cpp" />
+    <ClCompile Include="..\Common\treasury_cnst.cpp" />
+    <ClCompile Include="..\Common\xau\xau.audio.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.block.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.codec.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.dct.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.huff.cpp" />
+    <ClCompile Include="..\Common\xau\xjp.quant.cpp" />
+    <ClCompile Include="ai.cpp" />
+    <ClCompile Include="ai.dmap.cpp" />
+    <ClCompile Include="ai.explore.cpp" />
+    <ClCompile Include="ai.scanner.cpp" />
+    <ClCompile Include="AniObject.cpp" />
+    <ClCompile Include="ArmyList.cpp" />
+    <ClCompile Include="ArtifactList.cpp" />
+    <ClCompile Include="Artifacts.cpp" />
+    <ClCompile Include="AutoBattle.cpp" />
+    <ClCompile Include="AvatarMgr.cpp" />
+    <ClCompile Include="BattleAI.cpp" />
+    <ClCompile Include="BattleEngine.cpp" />
+    <ClCompile Include="BattleFort.cpp" />
+    <ClCompile Include="BattleInfo.cpp" />
+    <ClCompile Include="BattleObstacles.cpp" />
+    <ClCompile Include="BattlePF.cpp" />
+    <ClCompile Include="BattleUnit.cpp" />
+    <ClCompile Include="BattleView.cpp" />
+    <ClCompile Include="CastleCnsts.cpp" />
+    <ClCompile Include="Castles.cpp" />
+    <ClCompile Include="CastleView.cpp" />
+    <ClCompile Include="CommonControls.cpp" />
+    <ClCompile Include="CommonDialogs.cpp" />
+    <ClCompile Include="Composer.cpp" />
+    <ClCompile Include="Constructions.cpp" />
+    <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="dbg.cpp" />
+    <ClCompile Include="Dlg_ArmyRoom.cpp" />
+    <ClCompile Include="Dlg_ArtInfo.cpp" />
+    <ClCompile Include="Dlg_BattleHero.cpp" />
+    <ClCompile Include="Dlg_BattleLog.cpp" />
+    <ClCompile Include="Dlg_BattleResult.cpp" />
+    <ClCompile Include="Dlg_CapArt.cpp" />
+    <ClCompile Include="Dlg_CastSpell.cpp" />
+    <ClCompile Include="Dlg_Chest.cpp" />
+    <ClCompile Include="Dlg_ChooseBattleGroup.cpp" />
+    <ClCompile Include="Dlg_CreatInfo.cpp" />
+    <ClCompile Include="Dlg_FightGuard.cpp" />
+    <ClCompile Include="Dlg_HallOfFame.cpp" />
+    <ClCompile Include="Dlg_KingdomOverview.cpp" />
+    <ClCompile Include="Dlg_LeaveGuards.cpp" />
+    <ClCompile Include="Dlg_Level.cpp" />
+    <ClCompile Include="Dlg_Message.cpp" />
+    <ClCompile Include="Dlg_MLInfo.cpp" />
+    <ClCompile Include="Dlg_NewWeek.cpp" />
+    <ClCompile Include="Dlg_Other.cpp" />
+    <ClCompile Include="Dlg_PuzzleMap.cpp" />
+    <ClCompile Include="Dlg_Recruit.cpp" />
+    <ClCompile Include="Dlg_Rewards.cpp" />
+    <ClCompile Include="Dlg_RiseSkeletons.cpp" />
+    <ClCompile Include="Dlg_Save.cpp" />
+    <ClCompile Include="Dlg_ScenList.cpp" />
+    <ClCompile Include="Dlg_ScenProps.cpp" />
+    <ClCompile Include="Dlg_Settings.cpp" />
+    <ClCompile Include="Dlg_SkillInfo.cpp" />
+    <ClCompile Include="Dlg_SpellInfo.cpp" />
+    <ClCompile Include="Dlg_SplitCreatures.cpp" />
+    <ClCompile Include="Dlg_SurrenderCond.cpp" />
+    <ClCompile Include="Dlg_TimeEvent.cpp" />
+    <ClCompile Include="Dlg_TownList.cpp" />
+    <ClCompile Include="Dlg_WitchHut.cpp" />
+    <ClCompile Include="fogmap.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameMenuDlg.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="GfxHlp.cpp" />
+    <ClCompile Include="GfxManager.cpp" />
+    <ClCompile Include="helpers.cpp" />
+    <ClCompile Include="hero.cpp" />
+    <ClCompile Include="HeroView.cpp" />
+    <ClCompile Include="hmm.cpp" />
+    <ClCompile Include="iBattleGroupBtn.cpp" />
+    <ClCompile Include="InteractBattle.cpp" />
+    <ClCompile Include="IntroDlg.cpp" />
+    <ClCompile Include="ItemMgr.cpp" />
+    <ClCompile Include="Magic.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MeetView.cpp" />
+    <ClCompile Include="MenuView.cpp" />
+    <ClCompile Include="MinimapView.cpp" />
+    <ClCompile Include="objects.cpp" />
+    <ClCompile Include="OverlandView.cpp" />
+    <ClCompile Include="PathFinding.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="PopupDlg.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SfxManager.cpp" />
+    <ClCompile Include="SoundMap.cpp" />
+    <ClCompile Include="SpellListView.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TextComposer.cpp" />
+    <ClCompile Include="TextManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\GXLIB\gxl.application.h" />
+    <ClInclude Include="..\..\gxlib\gxl.audio.h" />
+    <ClInclude Include="..\..\gxlib\gxl.cmdline.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.common.def.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.common.tpl.h" />
+    <ClInclude Include="..\..\gxlib\gxl.config.file.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.array.h" />
+    <ClInclude Include="..\..\gxlib\gxl.ctr.cbuff.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.farray.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.list.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.ctr.map.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.debug.h" />
+    <ClInclude Include="..\..\gxlib\gxl.dialog.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.dib.cache.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.dib.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.dibfont.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.display.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.file.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.fixpoint.h" />
+    <ClInclude Include="..\..\gxlib\gxl.font.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.inc.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.input.h" />
+    <ClInclude Include="..\..\gxlib\gxl.logmgr.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.math.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.memdc.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.memory.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.metrics.h" />
+    <ClInclude Include="..\..\gxlib\gxl.pair.h" />
+    <ClInclude Include="..\..\gxlib\gxl.popupview.h" />
+    <ClInclude Include="..\..\gxlib\gxl.rnd.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.smartptr.h" />
+    <ClInclude Include="..\..\gxlib\gxl.stdctrl.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.string.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.string.std.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.timer.h" />
+    <ClInclude Include="..\..\gxlib\gxl.topmostview.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.vector.h" />
+    <ClInclude Include="..\..\gxlib\gxl.view.h" />
+    <ClInclude Include="..\..\gxlib\gxl.viewmgr.h" />
+    <ClInclude Include="..\..\GXLIB\gxl.window.h" />
+    <ClInclude Include="..\Common\Army.h" />
+    <ClInclude Include="..\Common\cm_castles.h" />
+    <ClInclude Include="..\Common\cm_creatures.h" />
+    <ClInclude Include="..\Common\cm_events.h" />
+    <ClInclude Include="..\Common\cm_magic.h" />
+    <ClInclude Include="..\Common\cnst_gfx.h" />
+    <ClInclude Include="..\Common\cnst_text.h" />
+    <ClInclude Include="..\Common\common.h" />
+    <ClInclude Include="..\Common\isometric.h" />
+    <ClInclude Include="..\Common\lzo.h" />
+    <ClInclude Include="..\Common\lzo\lzokay.hpp" />
+    <ClInclude Include="..\Common\rtti.h" />
+    <ClInclude Include="..\Common\serialize.h" />
+    <ClInclude Include="..\Common\SortArray.h" />
+    <ClInclude Include="..\Common\SpanMap.h" />
+    <ClInclude Include="..\Common\xau\xau.audio.h" />
+    <ClInclude Include="..\Common\xau\xau.cfg.h" />
+    <ClInclude Include="..\Common\xau\xau.math.h" />
+    <ClInclude Include="..\Common\xau\xau.ppf.h" />
+    <ClInclude Include="..\Common\xau\xau.ppf.impl.h" />
+    <ClInclude Include="..\Common\xau\xau.rice.h" />
+    <ClInclude Include="..\Common\xau\xau.rice.impl.h" />
+    <ClInclude Include="..\Common\xau\xbs.bs.h" />
+    <ClInclude Include="..\Common\xau\xbs.bs.impl.h" />
+    <ClInclude Include="..\Common\xau\xbs.bswap.h" />
+    <ClInclude Include="..\Common\xau\xbs.cfg.h" />
+    <ClInclude Include="..\Common\xau\xbs.math.h" />
+    <ClInclude Include="..\Common\xau\xjp.block.h" />
+    <ClInclude Include="..\Common\xau\xjp.boot.h" />
+    <ClInclude Include="..\Common\xau\xjp.codec.h" />
+    <ClInclude Include="..\Common\xau\xjp.dct.h" />
+    <ClInclude Include="..\Common\xau\xjp.huff.h" />
+    <ClInclude Include="..\Common\xau\xjp.huff.impl.h" />
+    <ClInclude Include="..\Common\xau\xjp.quant.h" />
+    <ClInclude Include="..\Common\xau\xjp.swizzle.h" />
+    <ClInclude Include="ai.explore.h" />
+    <ClInclude Include="ai.h" />
+    <ClInclude Include="ai.scanner.h" />
+    <ClInclude Include="AniObject.h" />
+    <ClInclude Include="ArmyList.h" />
+    <ClInclude Include="ArtifactList.h" />
+    <ClInclude Include="Artifacts.h" />
+    <ClInclude Include="AutoBattle.h" />
+    <ClInclude Include="AvatarMgr.h" />
+    <ClInclude Include="BattleAI.h" />
+    <ClInclude Include="BattleEngine.h" />
+    <ClInclude Include="BattleFort.h" />
+    <ClInclude Include="BattleInfo.h" />
+    <ClInclude Include="BattleObstacles.h" />
+    <ClInclude Include="BattlePF.h" />
+    <ClInclude Include="BattleUnit.h" />
+    <ClInclude Include="BattleView.h" />
+    <ClInclude Include="CastleCnsts.h" />
+    <ClInclude Include="Castles.h" />
+    <ClInclude Include="CastleView.h" />
+    <ClInclude Include="CommonControls.h" />
+    <ClInclude Include="CommonDialogs.h" />
+    <ClInclude Include="Composer.h" />
+    <ClInclude Include="Constructions.h" />
+    <ClInclude Include="Credits.h" />
+    <ClInclude Include="Ctl_CnstPage.h" />
+    <ClInclude Include="Ctl_MarketPage.h" />
+    <ClInclude Include="Ctl_MGuildPage.h" />
+    <ClInclude Include="Ctl_RecrPage.h" />
+    <ClInclude Include="Ctl_TavernPage.h" />
+    <ClInclude Include="dbg.h" />
+    <ClInclude Include="Dlg_ArmyRoom.h" />
+    <ClInclude Include="Dlg_ArtInfo.h" />
+    <ClInclude Include="Dlg_BattleHero.h" />
+    <ClInclude Include="Dlg_BattleLog.h" />
+    <ClInclude Include="Dlg_BattleResult.h" />
+    <ClInclude Include="Dlg_CapArt.h" />
+    <ClInclude Include="Dlg_CastSpell.h" />
+    <ClInclude Include="Dlg_Chest.h" />
+    <ClInclude Include="Dlg_ChooseBattleGroup.h" />
+    <ClInclude Include="Dlg_CreatInfo.h" />
+    <ClInclude Include="Dlg_FightGuard.h" />
+    <ClInclude Include="Dlg_HallOfFame.h" />
+    <ClInclude Include="Dlg_KingdomOverview.h" />
+    <ClInclude Include="Dlg_LeaveGuards.h" />
+    <ClInclude Include="Dlg_Level.h" />
+    <ClInclude Include="Dlg_Message.h" />
+    <ClInclude Include="Dlg_MLInfo.h" />
+    <ClInclude Include="Dlg_NewWeek.h" />
+    <ClInclude Include="Dlg_Other.h" />
+    <ClInclude Include="Dlg_PuzzleMap.h" />
+    <ClInclude Include="Dlg_Recruit.h" />
+    <ClInclude Include="Dlg_Rewards.h" />
+    <ClInclude Include="Dlg_RiseSkeletons.h" />
+    <ClInclude Include="Dlg_Save.h" />
+    <ClInclude Include="Dlg_ScenList.h" />
+    <ClInclude Include="Dlg_ScenProps.h" />
+    <ClInclude Include="Dlg_Settings.h" />
+    <ClInclude Include="Dlg_SkillInfo.h" />
+    <ClInclude Include="Dlg_SpellInfo.h" />
+    <ClInclude Include="Dlg_SplitCreatures.h" />
+    <ClInclude Include="Dlg_SurrenderCond.h" />
+    <ClInclude Include="Dlg_TimeEvent.h" />
+    <ClInclude Include="Dlg_TownList.h" />
+    <ClInclude Include="Dlg_WitchHut.h" />
+    <ClInclude Include="fogmap.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameMenuDlg.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="GfxHlp.h" />
+    <ClInclude Include="GfxManager.h" />
+    <ClInclude Include="helpers.h" />
+    <ClInclude Include="hero.h" />
+    <ClInclude Include="HeroView.h" />
+    <ClInclude Include="Hero_Army.h" />
+    <ClInclude Include="Hero_Artifacts.h" />
+    <ClInclude Include="Hero_Skills.h" />
+    <ClInclude Include="Hero_Spells.h" />
+    <ClInclude Include="hmm.h" />
+    <ClInclude Include="iBattleGroupBtn.h" />
+    <ClInclude Include="InteractBattle.h" />
+    <ClInclude Include="IntroDlg.h" />
+    <ClInclude Include="ItemMgr.h" />
+    <ClInclude Include="Magic.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MeetView.h" />
+    <ClInclude Include="MenuView.h" />
+    <ClInclude Include="MinimapView.h" />
+    <ClInclude Include="objects.h" />
+    <ClInclude Include="OverlandView.h" />
+    <ClInclude Include="PathFinding.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="PopupDlg.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SfxManager.h" />
+    <ClInclude Include="SoundMap.h" />
+    <ClInclude Include="SpellListView.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TextComposer.h" />
+    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="ViewDefs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\features.old.txt" />
+    <Text Include="..\features.txt" />
+    <Text Include="..\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

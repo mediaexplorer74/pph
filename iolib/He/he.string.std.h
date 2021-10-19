@@ -325,7 +325,7 @@ inline sint32 IsXDigit( iCharW c )
 
 inline iCharA*	StrChr( const iCharA* str, iCharA c )
 { 
-	return strchr( str, c ); 
+	return (iCharA*) strchr( str, c );
 }
 
 inline iCharW*	StrChr( const iCharW* str, iCharW c )
@@ -336,7 +336,7 @@ inline iCharW*	StrChr( const iCharW* str, iCharW c )
 
 inline iCharA*	StrRChr( const iCharA* str, iCharA c )
 { 
-	return strrchr( str, c ); 
+	return (iCharA*) strrchr( str, c );
 }
 
 inline iCharW*	StrRChr( const iCharW* str, iCharW c )
@@ -347,7 +347,7 @@ inline iCharW*	StrRChr( const iCharW* str, iCharW c )
 
 inline iCharA*	StrStr( const iCharA* str, const iCharA* sub )
 { 
-	return strstr( str, sub ); 
+	return (iCharA*) strstr( str, sub );
 }
 
 inline iCharW*	StrStr( const iCharW* str, const iCharW* sub )

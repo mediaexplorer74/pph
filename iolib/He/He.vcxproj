@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Unicode|Win32">
+      <Configuration>Debug_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Unicode|Win32">
+      <Configuration>Release_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>He</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{79658563-82EA-4B7F-8FBB-DC67A4545D35}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <OutDir>.\..\libs\</OutDir>
+    <IntDir>.\..\objs\He.wrel\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\libs\</OutDir>
+    <IntDir>.\..\objs\He.arel\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <OutDir>.\..\libs\</OutDir>
+    <IntDir>.\..\objs\He.wdbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\libs\</OutDir>
+    <IntDir>.\..\objs\He.adbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\objs\He.wrel\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\objs\He.wrel\He.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\objs\He.wrel\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\objs\He.wrel\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\libs\He.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\Libs\He.wrel.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\objs\He.arel\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\objs\He.arel\He.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\objs\He.arel\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\objs\He.arel\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\libs\He.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\Libs\He.arel.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\objs\He.wdbg\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\objs\He.wdbg\He.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\objs\He.wdbg\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\objs\He.wdbg\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Zm700 </AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\libs\He.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\Libs\He.wdbg.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\objs\He.adbg\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\objs\He.adbg\He.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\objs\He.adbg\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\objs\He.adbg\</ProgramDataBaseFileName>
+      <AdditionalOptions> /EHac /Zm700 </AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\libs\He.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\Libs\He.adbg.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="he.buff.h" />
+    <ClInclude Include="he.console.h" />
+    <ClInclude Include="he.container.cache.h" />
+    <ClInclude Include="he.container.fast.array.h" />
+    <ClInclude Include="he.container.fast.ilist.h" />
+    <ClInclude Include="he.container.hash.h" />
+    <ClInclude Include="he.container.map.h" />
+    <ClInclude Include="he.container.simple.array.h" />
+    <ClInclude Include="he.container.simple.map.h" />
+    <ClInclude Include="he.container.tree.h" />
+    <ClInclude Include="he.cpuf.h" />
+    <ClInclude Include="he.crc32.h" />
+    <ClInclude Include="he.debug.log.h" />
+    <ClInclude Include="he.defines.h" />
+    <ClInclude Include="he.file.h" />
+    <ClInclude Include="he.file.name.h" />
+    <ClInclude Include="he.file.std.h" />
+    <ClInclude Include="he.fixpoint.h" />
+    <ClInclude Include="he.handle.h" />
+    <ClInclude Include="he.inifile.h" />
+    <ClInclude Include="he.ipc.anpipes.h" />
+    <ClInclude Include="he.ipc.nmpipes.h" />
+    <ClInclude Include="he.localization.h" />
+    <ClInclude Include="he.memory.compress.h" />
+    <ClInclude Include="he.memory.dynbuff.h" />
+    <ClInclude Include="he.memory.h" />
+    <ClInclude Include="he.metrics.h" />
+    <ClInclude Include="he.net.address.h" />
+    <ClInclude Include="he.net.blocksock.h" />
+    <ClInclude Include="he.pair.h" />
+    <ClInclude Include="he.range.h" />
+    <ClInclude Include="he.smartptr.h" />
+    <ClInclude Include="he.std.h" />
+    <ClInclude Include="he.string.h" />
+    <ClInclude Include="he.string.std.h" />
+    <ClInclude Include="he.tables.h" />
+    <ClInclude Include="he.threads.h" />
+    <ClInclude Include="he.types.h" />
+    <ClInclude Include="he.vector.h" />
+    <ClInclude Include="he.wnd.helpers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="he.cpuf.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.crc32.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.debug.log.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.file.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.file.name.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.localization.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.memory.compress.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.memory.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.metrics.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.std.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.string.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.tables.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="he.threads.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /EHac /Zm700   /EHac /Zm700 </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Root">
+      <UniqueIdentifier>{b026a600-a27a-4a52-a517-48a4aadf6be1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Root\Dialogs">
+      <UniqueIdentifier>{df6c32bc-a938-4168-b6c9-ca060d2eb89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Root\Controls">
+      <UniqueIdentifier>{44c204a9-8433-42a0-a588-6b22eac7eed1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="li.cmndlg.cpp">
+      <Filter>Root\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="li.dialog.progress.cpp">
+      <Filter>Root\Dialogs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="li.cmndlg.h">
+      <Filter>Root\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="li.dialog.base.h">
+      <Filter>Root\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="li.dialog.progress.h">
+      <Filter>Root\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="li.ctrl.alevel.h">
+      <Filter>Root\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="li.ctrl.editbtn.h">
+      <Filter>Root\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="li.ctrl.outlookbar.h">
+      <Filter>Root\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="li.ctrl.statimg.h">
+      <Filter>Root\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="li.common.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="li.helpers.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="li.std.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="li.tbpane.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="li.tray.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+    <ClInclude Include="li.wtl.hlp.h">
+      <Filter>Root</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

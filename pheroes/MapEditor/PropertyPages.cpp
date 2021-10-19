@@ -31,7 +31,8 @@ iPropsPage_Army::iPropsPage_Army(iArmy& _army, LPCTSTR caption)
 LRESULT iPropsPage_Army::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
 	LPCTSTR cnames[CREAT_COUNT];
-	for (sint32 yy=0; yy<CREAT_COUNT; ++yy) cnames[yy] = gItemMgr.m_TextMgr[CREAT_NAMEKEY[yy]].CStr();
+	sint32 yy;
+	for (yy=0; yy<CREAT_COUNT; ++yy) cnames[yy] = gItemMgr.m_TextMgr[CREAT_NAMEKEY[yy]].CStr();
 	BOOL bCustom = FALSE;
 	for (uint32 xx=0; xx<7; ++xx) {
 		CComboBox cb(GetDlgItem(IDC_SLOT1_CRTYPE+xx));

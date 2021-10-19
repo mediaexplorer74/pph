@@ -495,7 +495,8 @@ uint32 ExportBitFont(iDib& dib, iDynamicBuffer& buff)
 	uint32 		curChar = 0;
 
 	// x-metrics
-	for (uint32 xx=0; xx<dib.GetWidth(); ++xx) {
+	uint32 xx;
+	for (xx=0; xx<dib.GetWidth(); ++xx) {
 		if (dib.GetPixel(iPoint(xx,0)) == iColor(0xFFFF0000)) {
 			uint32 w = xx-lastAnch-1;
 			fntW[curChar].posX = (uint16)lastAnch;
@@ -722,9 +723,9 @@ bool iExportDlg::Export()
 			iStringT orig = entry.text[GLNG_ENGLISH]; orig.Replace(_T("\""),_T("@")); orig.Replace(_T("@"),_T("\\\"")); 
 			iStringT t_rus = entry.text[GLNG_RUSSIAN]; t_rus.Replace(_T("\""),_T("@")); t_rus.Replace(_T("@"),_T("\\\"")); 
 			//iStringT t_pol = entry.text[GLNG_POLISH]; t_pol.Replace(_T("\""),_T("@")); t_pol.Replace(_T("@"),_T("\\\"")); 
-			fprintf(flng_eng,"\tL\"%s\"", CvtT2A<>(orig.CStr()));
-			fprintf(flng_rus,"\tL\"%s\"", CvtT2A<>(t_rus.CStr()));
-			//fprintf(flng_pol,"\tL\"%s\"", CvtT2A<>(t_pol.CStr()));
+			fprintf(flng_eng,"\tL\"%s\"", (const char*) CvtT2A<>(orig.CStr()));
+			fprintf(flng_rus,"\tL\"%s\"", (const char*) CvtT2A<>(t_rus.CStr()));
+			//fprintf(flng_pol,"\tL\"%s\"", (const char*) CvtT2A<>(t_pol.CStr()));
 			if (tid != textKeyList.Size() - 1) {
 				fprintf(flng_eng,",");
 				fprintf(flng_rus,",");
@@ -1078,7 +1079,8 @@ bool iExportDlg::Export()
 
 			// Player configuration
 			iSimpleArray<iPlayer*> pPlayers;
-			for (uint32 pid=PID_RED; pid<PID_COUNT; ++pid) {
+			uint32 pid;
+			for (pid=PID_RED; pid<PID_COUNT; ++pid) {
 				if (map.m_pPlayers[pid]) {
 					// Add player
 					pPlayers.Add(map.m_pPlayers[pid]);

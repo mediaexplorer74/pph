@@ -94,7 +94,8 @@ void iTextResDlg::UpdateTextResources()
 LRESULT iTextResDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 {
 	// List of supported languages
-	for (uint32 lid=0; lid<GLNG_COUNT; ++lid) if (m_pMap->m_lngMask & (1 << lid))  m_langs.Add(lid);
+	uint32 lid;
+	for (lid=0; lid<GLNG_COUNT; ++lid) if (m_pMap->m_lngMask & (1 << lid))  m_langs.Add(lid);
 	CComboBox cb(GetDlgItem(IDC_LNGLIST));
 	for (lid = 0; lid < m_langs.GetSize(); ++lid) {
 		cb.AddString(LANG_NAME[m_langs[lid]]);
