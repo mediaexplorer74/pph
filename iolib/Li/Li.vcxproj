@@ -49,7 +49,7 @@
       <ProgramDataBaseFileName>.\..\objs\Li.wdbg\</ProgramDataBaseFileName>
       <AdditionalOptions> /Zm700 </AdditionalOptions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <AdditionalIncludeDirectories>../../wtl10;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\externals\WTL\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0419</Culture>
