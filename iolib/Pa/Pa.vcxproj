@@ -5,22 +5,6 @@
       <Configuration>Debug_Unicode</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release_Unicode|Win32">
-      <Configuration>Release_Unicode</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Template|Win32">
-      <Configuration>Template</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <SccProjectName />
@@ -28,29 +12,7 @@
     <ProjectGuid>{5D6CC2D9-497E-4F14-BBC1-8E33943C4EF5}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
@@ -59,101 +21,16 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
-    <OutDir>.\..\libs\</OutDir>
-    <IntDir>.\..\objs\Pa.wrel\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\..\libs\</OutDir>
-    <IntDir>.\..\objs\Pa.arel\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
     <OutDir>.\..\libs\</OutDir>
     <IntDir>.\..\objs\Pa.wdbg\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\..\libs\</OutDir>
-    <IntDir>.\..\objs\Pa.adbg\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <Optimization>Disabled</Optimization>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <WarningLevel>Level2</WarningLevel>
-      <AdditionalIncludeDirectories>./;./libxml/src/;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\..\objs\Pa.wrel\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\..\objs\Pa.wrel\Pa.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\..\objs\Pa.wrel\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\objs\Pa.wrel\</ProgramDataBaseFileName>
-    </ClCompile>
-    <ResourceCompile>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.bsc</OutputFile>
-    </Bscmake>
-    <Lib>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.wrel.lib</OutputFile>
-    </Lib>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <Optimization>Disabled</Optimization>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>./;./libxml/src/;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\..\objs\Pa.arel\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\..\objs\Pa.arel\Pa.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\..\objs\Pa.arel\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\objs\Pa.arel\</ProgramDataBaseFileName>
-      <AdditionalOptions> PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
-    </ClCompile>
-    <ResourceCompile>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.bsc</OutputFile>
-    </Bscmake>
-    <Lib>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.arel.lib</OutputFile>
-    </Lib>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -182,36 +59,6 @@
     <Lib>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\..\libs\Pa.wdbg.lib</OutputFile>
-    </Lib>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <Optimization>Disabled</Optimization>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <WarningLevel>Level3</WarningLevel>
-      <MinimalRebuild>true</MinimalRebuild>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>./;./libxml/src/;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\..\objs\Pa.adbg\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\..\objs\Pa.adbg\Pa.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\..\objs\Pa.adbg\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\objs\Pa.adbg\</ProgramDataBaseFileName>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-    </ClCompile>
-    <ResourceCompile>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.bsc</OutputFile>
-    </Bscmake>
-    <Lib>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\libs\Pa.adbg.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -262,203 +109,89 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libxml\src\c14n.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\catalog.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\debugXML.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\DOCBparser.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\encoding.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\entities.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\error.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\globals.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\hash.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\HTMLparser.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\HTMLtree.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\list.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\nanoftp.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\nanohttp.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\parser.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\parserInternals.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\SAX.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\threads.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\tree.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\uri.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\valid.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xinclude.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xlink.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xmlIO.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xmlmemory.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xpath.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
     <ClCompile Include="libxml\src\xpointer.c">
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</SuppressStartupBanner>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
       <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">true</SuppressStartupBanner>
-      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</SuppressStartupBanner>
     </ClCompile>
-    <ClCompile Include="pa.convert.utf8.cpp">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
-    </ClCompile>
-    <ClCompile Include="pa.sax.parser.cpp">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
-    </ClCompile>
-    <ClCompile Include="pa.xml.builder.cpp">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> PRECOMP_VC7_TOBEREMOVED  PRECOMP_VC7_TOBEREMOVED</AdditionalOptions>
-    </ClCompile>
+    <ClCompile Include="pa.convert.utf8.cpp" />
+    <ClCompile Include="pa.sax.parser.cpp" />
+    <ClCompile Include="pa.xml.builder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
