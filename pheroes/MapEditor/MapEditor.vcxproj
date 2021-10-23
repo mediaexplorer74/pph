@@ -85,7 +85,7 @@
     <ClCompile Include="..\Common\cm_magic.cpp" />
     <ClCompile Include="..\Common\common.cpp" />
     <ClCompile Include="..\Common\lzo.cpp" />
-    <ClCompile Include="..\Common\lzo\lzokay.cpp">
+    <ClCompile Include="..\..\externals\lzokay\lzokay.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\Common\SpanMap.cpp" />
@@ -132,7 +132,7 @@
     <ClInclude Include="..\Common\common.h" />
     <ClInclude Include="..\Common\isometric.h" />
     <ClInclude Include="..\Common\lzo.h" />
-    <ClInclude Include="..\Common\lzo\lzokay.hpp" />
+    <ClInclude Include="..\..\externals\lzokay\lzokay.hpp" />
     <ClInclude Include="..\Common\objdef.h" />
     <ClInclude Include="..\Common\rtti.h" />
     <ClInclude Include="..\Common\serialize.h" />

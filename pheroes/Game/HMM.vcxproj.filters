@@ -461,7 +461,7 @@
     <ClCompile Include="..\Common\treasury_cnst.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\lzo\lzokay.cpp">
+    <ClCompile Include="..\..\externals\lzokay\lzokay.cpp">
       <Filter>Common\lzo</Filter>
     </ClCompile>
   </ItemGroup>
@@ -991,7 +991,7 @@
     <ClInclude Include="..\Common\SpanMap.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\Common\lzo\lzokay.hpp">
+    <ClInclude Include="..\..\externals\lzokay\lzokay.hpp">
       <Filter>Common\lzo</Filter>
     </ClInclude>
   </ItemGroup>

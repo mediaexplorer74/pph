@@ -107,7 +107,7 @@
     <ClCompile Include="..\Common\common.cpp" />
     <ClCompile Include="..\Common\lang_eng.cpp" />
     <ClCompile Include="..\Common\lzo.cpp" />
-    <ClCompile Include="..\Common\lzo\lzokay.cpp" />
+    <ClCompile Include="..\..\externals\lzokay\lzokay.cpp" />
     <ClCompile Include="..\Common\SpanMap.cpp" />
     <ClCompile Include="..\Common\treasury_cnst.cpp" />
     <ClCompile Include="..\Common\xau\xau.audio.cpp" />
@@ -260,7 +260,7 @@
     <ClInclude Include="..\Common\common.h" />
     <ClInclude Include="..\Common\isometric.h" />
     <ClInclude Include="..\Common\lzo.h" />
-    <ClInclude Include="..\Common\lzo\lzokay.hpp" />
+    <ClInclude Include="..\..\externals\lzokay\lzokay.hpp" />
     <ClInclude Include="..\Common\rtti.h" />
     <ClInclude Include="..\Common\serialize.h" />
     <ClInclude Include="..\Common\SortArray.h" />

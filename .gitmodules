@@ -1,3 +1,6 @@
 [submodule "externals/WTL"]
 	path = externals/WTL
 	url = https://git.code.sf.net/p/wtl/git
+[submodule "externals/lzokay"]
+	path = externals/lzokay
+	url = https://github.com/jackoalan/lzokay.git

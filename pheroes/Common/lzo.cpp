@@ -19,7 +19,7 @@
  */ 
 
 #include "stdafx.h"
-#include "lzo/lzokay.hpp"
+#include "../../externals/lzokay/lzokay.hpp"
 #include "lzo.h"
 
 namespace LZO {
