@@ -19,7 +19,7 @@
  */ 
 
 #include "xe.std.h"
-#include "png/lpng125/png.h"
+#include "png.h"
 
 bool iDibSaver::SaveBmp(const iDib &dib, const iStringT &fname)
 {

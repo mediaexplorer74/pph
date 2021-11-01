@@ -4,3 +4,6 @@
 [submodule "externals/lzokay"]
 	path = externals/lzokay
 	url = https://github.com/jackoalan/lzokay.git
+[submodule "externals/libpng"]
+	path = externals/libpng
+	url = https://git.code.sf.net/p/libpng/code

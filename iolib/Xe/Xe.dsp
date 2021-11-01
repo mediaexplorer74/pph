@@ -44,7 +44,7 @@ RSC=rc.exe
 # PROP Target_Dir ""
 MTL=midl.exe
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /Zm700 /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -68,7 +68,7 @@ LIB32=link.exe -lib
 # PROP Target_Dir ""
 MTL=midl.exe
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /Zm700 /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -91,8 +91,8 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "..\objs\Xe.wdbg"
 # PROP Target_Dir ""
 MTL=midl.exe
-# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/Xe.pch" /YX /FD /GZ /Zm700 /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /GZ /Zm700 /c
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/Xe.pch" /YX /FD /GZ /Zm700 /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /GZ /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -115,8 +115,8 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "..\objs\Xe.wrel"
 # PROP Target_Dir ""
 MTL=midl.exe
-# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Xe.pch" /YX /FD /Zm700 /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /Ob2 /I "png\zlib" /I "png\lpng125" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /Zm700 /QIfist /c
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Xe.pch" /YX /FD /Zm700 /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /Ob2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /Zm700 /QIfist /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -359,83 +359,83 @@ SOURCE=.\PNG\zlib\zutil.h
 # End Group
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\png.c
+SOURCE=..\..\externals\libpng\png.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\png.h
+SOURCE=..\..\externals\libpng\png.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngasmrd.h
+SOURCE=..\..\externals\libpng\pngasmrd.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngconf.h
+SOURCE=..\..\externals\libpng\pngconf.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngerror.c
+SOURCE=..\..\externals\libpng\pngerror.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pnggccrd.c
+SOURCE=..\..\externals\libpng\pnggccrd.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngget.c
+SOURCE=..\..\externals\libpng\pngget.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngmem.c
+SOURCE=..\..\externals\libpng\pngmem.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngpread.c
+SOURCE=..\..\externals\libpng\pngpread.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngread.c
+SOURCE=..\..\externals\libpng\pngread.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngrio.c
+SOURCE=..\..\externals\libpng\pngrio.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngrtran.c
+SOURCE=..\..\externals\libpng\pngrtran.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngrutil.c
+SOURCE=..\..\externals\libpng\pngrutil.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngset.c
+SOURCE=..\..\externals\libpng\pngset.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngtrans.c
+SOURCE=..\..\externals\libpng\pngtrans.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngvcrd.c
+SOURCE=..\..\externals\libpng\pngvcrd.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngwio.c
+SOURCE=..\..\externals\libpng\pngwio.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngwrite.c
+SOURCE=..\..\externals\libpng\pngwrite.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngwtran.c
+SOURCE=..\..\externals\libpng\pngwtran.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\lpng125\pngwutil.c
+SOURCE=..\..\externals\libpng\pngwutil.c
 # End Source File
 # End Group
 # End Target
