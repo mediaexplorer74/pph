@@ -26,7 +26,7 @@ This project can be compiled and run in Windows 10:
     * C++ ATL for latest v142 build tools
     * C++ MFC for latest v142 build tools
 2. Open `pheroes/HMM.sln` as a solution.
-3. Select HMM or MapEditor in Solutuon Explorer and run it via Green Triangle.
+3. Select HMM or MapEditor in Solution Explorer and run it via Green Triangle.
 
 ## Credits
 
