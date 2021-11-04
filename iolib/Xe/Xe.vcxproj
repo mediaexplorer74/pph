@@ -41,7 +41,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>png\zlib;..\..\externals\libpng;JPG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\externals\zlib;..\..\externals\libpng;JPG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\..\objs\Xe.wdbg\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\..\objs\Xe.wdbg\Xe.pch</PrecompiledHeaderOutputFile>
@@ -115,46 +115,46 @@
     <ClCompile Include="..\..\externals\libpng\pngwutil.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\adler32.c">
+    <ClCompile Include="..\..\externals\zlib\adler32.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\compress.c">
+    <ClCompile Include="..\..\externals\zlib\compress.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\crc32.c">
+    <ClCompile Include="..\..\externals\zlib\crc32.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\deflate.c">
+    <ClCompile Include="..\..\externals\zlib\deflate.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infblock.c">
+    <ClCompile Include="..\..\externals\zlib\infblock.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infcodes.c">
+    <ClCompile Include="..\..\externals\zlib\infcodes.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inffast.c">
+    <ClCompile Include="..\..\externals\zlib\inffast.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inflate.c">
+    <ClCompile Include="..\..\externals\zlib\inflate.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inftrees.c">
+    <ClCompile Include="..\..\externals\zlib\inftrees.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infutil.c">
+    <ClCompile Include="..\..\externals\zlib\infutil.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\maketree.c">
+    <ClCompile Include="..\..\externals\zlib\maketree.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\trees.c">
+    <ClCompile Include="..\..\externals\zlib\trees.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\uncompr.c">
+    <ClCompile Include="..\..\externals\zlib\uncompr.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\zutil.c">
+    <ClCompile Include="..\..\externals\zlib\zutil.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'"> /Zm700   /Zm700 </AdditionalOptions>
     </ClCompile>
     <ClCompile Include="xe.color.cpp">
@@ -210,17 +210,17 @@
     <ClInclude Include="..\..\externals\libpng\png.h" />
     <ClInclude Include="..\..\externals\libpng\pngasmrd.h" />
     <ClInclude Include="..\..\externals\libpng\pngconf.h" />
-    <ClInclude Include="PNG\zlib\deflate.h" />
-    <ClInclude Include="PNG\zlib\infblock.h" />
-    <ClInclude Include="PNG\zlib\infcodes.h" />
-    <ClInclude Include="PNG\zlib\inffast.h" />
-    <ClInclude Include="PNG\zlib\inffixed.h" />
-    <ClInclude Include="PNG\zlib\inftrees.h" />
-    <ClInclude Include="PNG\zlib\infutil.h" />
-    <ClInclude Include="PNG\zlib\trees.h" />
-    <ClInclude Include="PNG\zlib\zconf.h" />
-    <ClInclude Include="PNG\zlib\zlib.h" />
-    <ClInclude Include="PNG\zlib\zutil.h" />
+    <ClInclude Include="..\..\externals\zlib\deflate.h" />
+    <ClInclude Include="..\..\externals\zlib\infblock.h" />
+    <ClInclude Include="..\..\externals\zlib\infcodes.h" />
+    <ClInclude Include="..\..\externals\zlib\inffast.h" />
+    <ClInclude Include="..\..\externals\zlib\inffixed.h" />
+    <ClInclude Include="..\..\externals\zlib\inftrees.h" />
+    <ClInclude Include="..\..\externals\zlib\infutil.h" />
+    <ClInclude Include="..\..\externals\zlib\trees.h" />
+    <ClInclude Include="..\..\externals\zlib\zconf.h" />
+    <ClInclude Include="..\..\externals\zlib\zlib.h" />
+    <ClInclude Include="..\..\externals\zlib\zutil.h" />
     <ClInclude Include="xe.color.h" />
     <ClInclude Include="xe.cursor.h" />
     <ClInclude Include="xe.dc.h" />

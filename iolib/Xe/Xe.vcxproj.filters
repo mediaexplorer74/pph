@@ -8,7 +8,7 @@
     <Filter Include="PNG">
       <UniqueIdentifier>{221a7082-6244-407a-9ecf-26b11e1a1776}</UniqueIdentifier>
     </Filter>
-    <Filter Include="PNG\ZLIB">
+    <Filter Include="..\..\externals\zlib">
       <UniqueIdentifier>{b1911bd9-0696-4326-a907-3ed8ec98e44a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -61,47 +61,47 @@
     <ClCompile Include="xe.dib.transform.fscale.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\adler32.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\adler32.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\compress.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\compress.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\crc32.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\crc32.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\deflate.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\deflate.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infblock.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\infblock.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infcodes.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\infcodes.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inffast.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\inffast.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inflate.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\inflate.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\inftrees.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\inftrees.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\infutil.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\infutil.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\maketree.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\maketree.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\trees.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\trees.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\uncompr.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\uncompr.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
-    <ClCompile Include="PNG\zlib\zutil.c">
-      <Filter>PNG\ZLIB</Filter>
+    <ClCompile Include="..\..\externals\zlib\zutil.c">
+      <Filter>..\..\externals\zlib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\externals\libpng\png.c">
       <Filter>PNG</Filter>
@@ -192,38 +192,38 @@
     <ClInclude Include="xe.std.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\deflate.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\deflate.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\infblock.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\infblock.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\infcodes.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\infcodes.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\inffast.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\inffast.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\inffixed.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\inffixed.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\inftrees.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\inftrees.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\infutil.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\infutil.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\trees.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\trees.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\zconf.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\zconf.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\zlib.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\zlib.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
-    <ClInclude Include="PNG\zlib\zutil.h">
-      <Filter>PNG\ZLIB</Filter>
+    <ClInclude Include="..\..\externals\zlib\zutil.h">
+      <Filter>..\..\externals\zlib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\externals\libpng\png.h">
       <Filter>PNG</Filter>

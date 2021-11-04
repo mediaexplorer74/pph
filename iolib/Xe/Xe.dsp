@@ -44,7 +44,7 @@ RSC=rc.exe
 # PROP Target_Dir ""
 MTL=midl.exe
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /Zm700 /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -68,7 +68,7 @@ LIB32=link.exe -lib
 # PROP Target_Dir ""
 MTL=midl.exe
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /Zm700 /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -91,8 +91,8 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "..\objs\Xe.wdbg"
 # PROP Target_Dir ""
 MTL=midl.exe
-# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/Xe.pch" /YX /FD /GZ /Zm700 /c
-# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /GZ /Zm700 /c
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/Xe.pch" /YX /FD /GZ /Zm700 /c
+# ADD CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /GZ /Zm700 /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -115,8 +115,8 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "..\objs\Xe.wrel"
 # PROP Target_Dir ""
 MTL=midl.exe
-# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Xe.pch" /YX /FD /Zm700 /c
-# ADD CPP /nologo /MD /W3 /GX /O2 /Ob2 /I "png\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /Zm700 /QIfist /c
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Xe.pch" /YX /FD /Zm700 /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /Ob2 /I "..\..\externals\zlib" /I "..\..\externals\libpng" /I "JPG" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "_LIB" /YX /FD /Zm700 /QIfist /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -258,103 +258,103 @@ SOURCE=.\xe.std.h
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=.\PNG\zlib\adler32.c
+SOURCE=..\..\externals\zlib\adler32.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\compress.c
+SOURCE=..\..\externals\zlib\compress.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\crc32.c
+SOURCE=..\..\externals\zlib\crc32.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\deflate.c
+SOURCE=..\..\externals\zlib\deflate.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\deflate.h
+SOURCE=..\..\externals\zlib\deflate.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infblock.c
+SOURCE=..\..\externals\zlib\infblock.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infblock.h
+SOURCE=..\..\externals\zlib\infblock.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infcodes.c
+SOURCE=..\..\externals\zlib\infcodes.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infcodes.h
+SOURCE=..\..\externals\zlib\infcodes.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inffast.c
+SOURCE=..\..\externals\zlib\inffast.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inffast.h
+SOURCE=..\..\externals\zlib\inffast.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inffixed.h
+SOURCE=..\..\externals\zlib\inffixed.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inflate.c
+SOURCE=..\..\externals\zlib\inflate.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inftrees.c
+SOURCE=..\..\externals\zlib\inftrees.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\inftrees.h
+SOURCE=..\..\externals\zlib\inftrees.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infutil.c
+SOURCE=..\..\externals\zlib\infutil.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\infutil.h
+SOURCE=..\..\externals\zlib\infutil.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\maketree.c
+SOURCE=..\..\externals\zlib\maketree.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\trees.c
+SOURCE=..\..\externals\zlib\trees.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\trees.h
+SOURCE=..\..\externals\zlib\trees.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\uncompr.c
+SOURCE=..\..\externals\zlib\uncompr.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\zconf.h
+SOURCE=..\..\externals\zlib\zconf.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\zlib.h
+SOURCE=..\..\externals\zlib\zlib.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\zutil.c
+SOURCE=..\..\externals\zlib\zutil.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\PNG\zlib\zutil.h
+SOURCE=..\..\externals\zlib\zutil.h
 # End Source File
 # End Group
 # Begin Source File
