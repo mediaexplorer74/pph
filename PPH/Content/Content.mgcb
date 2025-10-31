@@ -1,0 +1,54 @@
+#----------------------------- Global Properties ----------------------------#
+
+/Platform:Windows
+/Profile:Reach
+/GraphicsProfile:Reach
+/OutputDir:bin
+/IntermediateDir:obj
+/Quiet
+
+# Root for raw assets (будет изменён на AssetsRaw позже)
+/ContentRoot:AssetsRaw
+
+#----------------------------- Content References ---------------------------#
+
+# PNG-спрайты (из pheroes/bin)
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:iologo.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:cell_grid.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:cell_red.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:cell_yel.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:cell_sel.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:ctl_cellr.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:ctl_celly.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:node_sel.png
+
+# Шрифты SpriteFont (находятся в AssetsRaw/fonts)
+
+/Importer:FontDescriptionImporter
+/Processor:FontDescriptionProcessor
+/Build:fonts/ui.spritefont
+

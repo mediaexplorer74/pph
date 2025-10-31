@@ -1,32 +1,16 @@
-﻿# Pocket Palm Heroes
+﻿# pph (Pocket Palm Heroes)
 
-Native edition
+![Logo](Images/logo.png)
 
-## Cloning
+My fork of PPH-Native project for some micro-RnD
 
-This repo contains Git Submodules (with dependencies), so after cloning, you need to initialize them:
+## Screenshots
+![Logo](Images/sshot01.png)
+![Logo](Images/sshot02.png)
+![Logo](Images/sshot03.png)
 
-```shell script
-git clone THIS_REPO_URL
-git submodule init
-git submodule update
-
-# OR (in a single command instead of three):
-git clone --recurse-submodules THIS_REPO_URL
-```
-
-## Building and running
-
-This project can be compiled and run in Windows 10:
-
-1. Install Visual Studio Community 2019 and the following components in its Installer:
-    * Desktop development with C++
-    * MSVC v142
-    * Windows 10 SDK
-    * C++ ATL for latest v142 build tools
-    * C++ MFC for latest v142 build tools
-2. Open `pheroes/HMM.sln` as a solution.
-3. Select HMM or MapEditor in Solution Explorer and run it via Green Triangle.
+## Status
+- Init phase of Windows Mobile - Windows Phone (UWP) porting
 
 ## Credits
 
@@ -41,6 +25,15 @@ Also, there are the following dependencies in the `externals` dir:
 * LZ👌 (lzokay), MIT License
 * libpng and zlib, zlib License
 
-## License
+## References
+- https://github.com/SerVB/pph-native PPH by SerVB
+- https://www.palmheroes.com/ Old Palm Heroes site
 
-This project is [Apache 2.0](LICENSE)-licensed.
+## .
+
+As is. No support. RnD only.
+
+## ..
+
+[m][e] 2025
+
