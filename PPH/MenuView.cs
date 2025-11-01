@@ -8,6 +8,7 @@ namespace PPH
     {
         private readonly ViewManager _mgr;
         private SpriteFont _font;
+        private Texture2D _selIcon;
         private readonly string[] _items = { "Start Overland", "Diagnostics", "Exit" };
         private int _sel = 0;
 
@@ -29,10 +30,12 @@ namespace PPH
                 switch (_sel)
                 {
                     case 0:
-                        _mgr.Replace(new OverlandView(_mgr));
+                        if (_mgr.Process != null) _mgr.Process.StartOverland();
+                        else _mgr.Replace(new OverlandView(_mgr));
                         break;
                     case 1:
-                        _mgr.Replace(new DiagnosticsView(_mgr));
+                        if (_mgr.Process != null) _mgr.Process.OpenDiagnostics();
+                        else _mgr.Replace(new DiagnosticsView(_mgr));
                         break;
                     case 2:
                         // TODO: корректное завершение приложения в UWP (пока игнорируем)
@@ -46,7 +49,11 @@ namespace PPH
             // Lazy-load шрифта из Content
             if (_font == null)
             {
-                try { _font = Game1.ContentManager.Load<SpriteFont>("font"); } catch { }
+                try { _font = Game1.ContentManager.Load<SpriteFont>("fonts/ui"); } catch { }
+            }
+            if (_selIcon == null)
+            {
+                try { _selIcon = Game1.ContentManager.Load<Texture2D>("node_sel"); } catch { }
             }
 
             spriteBatch.GraphicsDevice.Clear(Color.DarkSlateGray);
@@ -62,7 +69,14 @@ namespace PPH
                 {
                     var color = i == _sel ? Color.Yellow : Color.White;
                     var prefix = i == _sel ? "> " : "  ";
-                    spriteBatch.DrawString(_font, prefix + _items[i], pos + new Vector2(0, 50 + i * 30), color);
+                    var itemPos = pos + new Vector2(0, 50 + i * 30);
+                    spriteBatch.DrawString(_font, prefix + _items[i], itemPos, color);
+                    // Иконка выбора слева от активного пункта
+                    if (_selIcon != null && i == _sel)
+                    {
+                        var iconPos = itemPos + new Vector2(-_selIcon.Width - 8, -4);
+                        spriteBatch.Draw(_selIcon, iconPos, Color.White);
+                    }
                 }
             }
 

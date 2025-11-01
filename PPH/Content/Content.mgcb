@@ -52,3 +52,15 @@
 /Processor:FontDescriptionProcessor
 /Build:fonts/ui.spritefont
 
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:fnt_big.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:fnt_med.png
+
+/Importer:TextureImporter
+/Processor:TextureProcessor
+/Build:fnt_sml.png
+

@@ -22,7 +22,8 @@ namespace PPH
             var prev = input.PrevKeyboard;
             if (prev.IsKeyUp(Keys.Escape) && ks.IsKeyDown(Keys.Escape))
             {
-                _mgr.Replace(new OverlandView(_mgr));
+                if (_mgr.Process != null) _mgr.Process.ExitBattleToOverland();
+                else _mgr.Replace(new OverlandView(_mgr));
             }
         }
 
@@ -30,7 +31,13 @@ namespace PPH
         {
             if (_font == null)
             {
-                try { _font = Game1.ContentManager.Load<SpriteFont>("font"); } catch { }
+                try 
+                { 
+                    _font = Game1.ContentManager.Load<SpriteFont>("fonts/ui"); 
+                } 
+                catch 
+                { 
+                }
             }
 
             spriteBatch.GraphicsDevice.Clear(Color.DarkSlateBlue);

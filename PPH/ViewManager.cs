@@ -10,6 +10,9 @@ namespace PPH
         private readonly Stack<IView> _stack = new Stack<IView>();
         private readonly InputRouter _inputRouter = new InputRouter();
 
+        // Ссылка на центральный процесс игры для удобного доступа из вьюшек
+        public GameProcess Process { get; set; }
+
         public IView ActiveView => _stack.Count > 0 ? _stack.Peek() : null;
 
         public void Push(IView view)

@@ -3,7 +3,7 @@
 - Исходные модули: `pheroes` (игра), `gxlib` (графика/ввод/звук), `iolib` (утилиты), `externals` (zlib/libpng и пр.).
 - Целевой проект: `PPH/PPH.csproj` c Monogame и WinSDK 10240.
 - В C# уже есть демо-логика, её планируем заменить портированной игрой.
-- Ресурсы сейчас в папке `Bin`; планируем переименовать и интегрировать через Content Pipeline.
+- Игровые карты и данные (`.hmm`) перенесены из `pheroes/bin` в `PPH/Data`; их нужно будет проанализировать и подключить.
 
 # Goals
 - Провести системный анализ архитектуры C++ проектов и основных компонентов.
@@ -29,22 +29,48 @@
 - [Refactor] Переименован namespace `TiltMaze` → `PPH` во всех C# и XAML, обновлён `Package.appxmanifest` (`EntryPoint=PPH.App`).
 - [Refactor] Переписан `Game1.cs`: убран `usePPHMode` и вся TiltMaze-логика; оставлен чистый цикл Monogame, `ViewManager.Push(new MenuView)`.
  - [Impl] Связаны переходы: Menu → Overland (Enter), Overland → Battle (B), Battle → Overland (Esc).
+- [Impl] Введён центральный контроллер состояний `GameProcess` (enum: Menu/Overland/Battle/Diagnostics), интегрирован в `Game1` и `ViewManager`; вьюшки теперь вызывают переходы через `GameProcess` вместо прямых `_mgr.Replace`.
+- [Fix] Исправлен APPX3207 при упаковке: исключён `Assets/LargeTile.scale-400.png` (превышал лимит 200KB), оставлены `scale-100/125/150/200` варианты.
+- [Data] Папка `PPH/Data/**` добавлена в проект как `Content` с `CopyToOutputDirectory=PreserveNewest` — файлы `.hmm` и ресурсы попадут в пакет и выходной каталог.
+ - [Diag] Добавлен `HmmReader.cs` и горячая клавиша `[H]` в `DiagnosticsView` для смоук‑теста чтения заголовка `xl.hmm` (version/saveTime/seed/mapSize).
 - [Impl] Добавлена `DiagnosticsView`: базовый тест ввода (клавиатура/мышь/тач) и рендера; пункт меню "Diagnostics".
 - [Init] Добавлен `Content.mgcb` и `MonoGame.Content.Builder.Task` в проект; создан `Docs/content_pipeline_readme.md`.
  - [Assets] Скопированы исходные ресурсы из `pheroes/bin` в `PPH/Content/AssetsRaw` (структура сохранена).
  - [MGCB] Обновлён `Content.mgcb`: `ContentRoot=AssetsRaw`; добавлены сборки PNG (`iologo.png`, `cell_*`, `ctl_*`, `node_sel.png`) и тестовый шрифт `fonts/ui.spritefont`.
- - [Diagnostics] Расширена `DiagnosticsView`: загрузка `iologo` (Texture2D) из Content Pipeline, проигрывание SFX (`player_hit`) [P] и музыки (`Music`) [M]; отображение статуса контента.
- - [Build] Проект успешно собирается (Debug, UWP); Content Pipeline компилирует указанные ассеты.
+- [Diagnostics] Расширена `DiagnosticsView`: загрузка `iologo` (Texture2D) из Content Pipeline, проигрывание SFX (`player_hit`) [P] и музыки (`Music`) [M]; отображение статуса контента.
+- [Build] Проект успешно собирается (Debug, UWP); Content Pipeline компилирует указанные ассеты.
+ - [Refactor] Обновлён путь шрифта во всех вьюшках: переход с `font` на `fonts/ui` (SpriteFont), единообразие отображения текста.
+ - [Diagnostics] Добавлен визуальный тест тайловой сетки и альфа-блендинга в `DiagnosticsView` (отрисовка `cell_grid` + overlay `cell_red/cell_yel/cell_sel` с полупрозрачностью).
+ - [Note] По договорённости ассетные задачи (копирование/настройка mgcb) временно пропущены; предполагаем, что контент уже подготовлен и доступен из `Content/AssetsRaw`.
+ - [Build] Локальная сборка через `dotnet build` выявила отсутствие WindowsXaml targets; для UWP/WinUI сборки используем MSBuild из Visual Studio (Build Tools). Кодовые правки не влияют на контент.
+- [Impl] Расширён `HmmReader`: чтение `Name/Description/FileVersion/Author` (UTF-16LE) и метрик карты (`Width/Height`), добавлен `ReadHeaderAsync`; метод сводки `[H]` теперь выводит строки и размеры.
+- [Impl] Обновлён `OverlandView`: ленивая загрузка заголовка `Data/xl.hmm`, отображение строки о карте и отрисовка простой сетки по метрикам (клетки 10px, рамка) для визуальной проверки.
+- [Build] Сборка `Debug|x64` без `AppxBundle` завершена успешно после изменений парсера и сетки.
+ - [Fix] Исправлена ошибка компиляции `Task<>` в `OverlandView.cs` (добавлен `using System.Threading.Tasks`).
+ - [Fix] Снята неоднозначность `UnicodeEncoding` между `Windows.Storage.Streams` и `System.Text` в `HmmReader.cs` (явная установка `DataReader.UnicodeEncoding = Windows.Storage.Streams.UnicodeEncoding.Utf16LE`).
+ - [Impl] Добавлен `RawAssetLoader.cs`: прямой загрузчик PNG (`Texture2D`) и 8‑бит PCM (`SoundEffect`) из `Data/Resources` без XNB; построение WAV-заголовка для PCM8 mono 22050 Hz.
+ - [Build] Проект успешно пересобран `Debug|x64`; `PPH.exe` собран и готов к запуску.
 
 # Pending
 - Сформировать детальный документ плана портирования (этапы, метрики) и согласовать.
-- Подготовить стратегию переноса ресурсов (переименование `pheroes/bin` → `AssetsRaw`/`ContentRaw`, настройка импортёров в Content Pipeline).
  - Интегрировать маршрутизацию ввода к активной вьюшке (тач/мышь/клавиатура).
  - Скелет интеграции: маппинг ввода (`Keyboard/Mouse/Touch`), рендер (`SpriteBatch`), аудио (`SoundEffect/Song`).
- - Проба импорта ключевых ассетов и тест отрисовки базового экрана меню.
+- Проба импорта ключевых ассетов и тест отрисовки базового экрана меню.
 - Начать перенос `iGame.Process` и связывание со вьюшками (меню → оверленд → бой).
 - Интеграция ассетов: переименовать `pheroes/bin` → `AssetsRaw`, прописать импортёры в `Content.mgcb`, начать добавление ключевых ассетов.
- - Интеграция ассетов: продолжить добавление PNG/шрифтов/иных ресурсов в `Content.mgcb` (тайлы, UI-элементы), проверить доступность в вьюшках.
- - Расширить `DiagnosticsView`: тест отрисовки тайловой сетки, базовая проверка альфа/блендинга, загрузка шрифта `ui` из Pipeline.
+- Проанализировать формат `.hmm` и интегрировать игровые данные из `PPH/Data` в логику `OverlandView`.
+ - Расширить парсинг `.hmm`: игроки/маски/сложность/режим, корректное сопоставление `MapSize` с метриками.
+ - Заменить линийную сетку на реальную тайловую отрисовку (спрайты/текстуры), добавить прокрутку/масштабирование для больших карт.
+ - Связать базовую загрузку карты с логикой `OverlandView` (привязка данных тайлов, объектов, игроков).
+- (Paused) Ассетные задачи по `Content.mgcb` и добавлению PNG/шрифтов — отложены, так как контент уже был приготовлен вручную.
+ - Принять компромисс по ассетам: где возможно, использовать PNG/PCM напрямую из `Data` через `RawAssetLoader` (для удобного редактирования через MapEditor), сохраняя XNB только для шрифтов/временных ассетов.
+ - Интегрировать `RawAssetLoader` в вьюшки: заменить тестовую сетку на реальные тайлы из `Data/Resources/hmm/GFX` по `spriteset.xml`; настроить базовый парсер спрайт‑метаданных.
+ - Настроить загрузку SFX из `Data/Resources/hmm/SFX` по `soundset.xml` (PCM8 mono 22050 Hz), связать с событиями в Overland/Battle.
+- [Next] Если при упаковке возникнут аналогичные ошибки для других `.scale-400.png` (Square150x150, SmallTile, Wide310x150), исключить соответствующие 400%-варианты из проекта.
+- [Next] Реализовать `Data/HmmReader.cs` и смоук‑тест чтения заголовка `xl.hmm` в `DiagnosticsView`.
+ - [Next] Подготовить импорт и конвертацию графики/звука из `Data` (png → xnb/texture, pcm → xnb/sound) и связать с Overland/Battle логикой.
+ - [Next] Сопоставить `MapSizeCode` с фактическими метриками тайлов и масштабами рендера; добавить прокрутку/масштаб.
+ - [Next] Развивать игровую логику, UI/взаимодействия, затем Бой и AI; формат сейвов и пути данных UWP.
+ - Проверить сборку проекта в среде с установленным Visual Studio MSBuild (UWP targets), затем выполнить визуальную проверку экранов.
  - Расширить тесты диагностики (отрисовка спрайта/тайла, проверка музыки/звук эффекта).
  - Проверить сборку проекта после рефакторинга; устранить возможные ошибки компиляции.

@@ -10,6 +10,7 @@ namespace PPH
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private ViewManager _viewManager;
+        private GameProcess _process;
 
         public Game1()
         {
@@ -24,7 +25,9 @@ namespace PPH
             base.Initialize();
 
             _viewManager = new ViewManager();
-            _viewManager.Push(new MenuView(_viewManager));
+            _process = new GameProcess(_viewManager);
+            _viewManager.Process = _process;
+            _process.GoToMenu();
         }
 
         protected override void LoadContent()

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Threading.Tasks;
 
 namespace PPH
 {
@@ -20,11 +21,16 @@ namespace PPH
         private SoundEffect _sfx;
         private Song _song;
         private bool _musicPlaying;
+        private Texture2D _grid;
+        private Texture2D _cellRed;
+        private Texture2D _cellYel;
+        private Texture2D _cellSel;
 
         private Keys? _lastKey;
         private Point? _lastMouseClick;
         private Vector2? _lastTouch;
         private string _info = string.Empty;
+        private string _hmmInfo = string.Empty;
 
         public DiagnosticsView(ViewManager mgr)
         {
@@ -50,8 +56,19 @@ namespace PPH
                 _lastKey = newlyPressed[0];
                 if (_lastKey == Keys.Escape)
                 {
-                    _mgr.Replace(new MenuView(_mgr));
+                    if (_mgr.Process != null) _mgr.Process.GoToMenu();
+                    else _mgr.Replace(new MenuView(_mgr));
                     return;
+                }
+
+                // Чтение заголовка xl.hmm из пакета
+                if (_lastKey == Keys.H)
+                {
+                    Task.Run(async () =>
+                    {
+                        var info = await HmmReader.ReadHeaderSummaryAsync("Data/xl.hmm");
+                        _hmmInfo = info;
+                    });
                 }
 
                 // Горячие клавиши аудио
@@ -103,7 +120,7 @@ namespace PPH
         {
             if (_font == null)
             {
-                try { _font = Game1.ContentManager.Load<SpriteFont>("font"); } catch { }
+                try { _font = Game1.ContentManager.Load<SpriteFont>("fonts/ui"); } catch { }
             }
 
             // Ленивая загрузка ресурсов из Content Pipeline
@@ -119,9 +136,25 @@ namespace PPH
             {
                 try { _song = Game1.ContentManager.Load<Song>("Music"); } catch { }
             }
+            if (_grid == null)
+            {
+                try { _grid = Game1.ContentManager.Load<Texture2D>("cell_grid"); } catch { }
+            }
+            if (_cellRed == null)
+            {
+                try { _cellRed = Game1.ContentManager.Load<Texture2D>("cell_red"); } catch { }
+            }
+            if (_cellYel == null)
+            {
+                try { _cellYel = Game1.ContentManager.Load<Texture2D>("cell_yel"); } catch { }
+            }
+            if (_cellSel == null)
+            {
+                try { _cellSel = Game1.ContentManager.Load<Texture2D>("cell_sel"); } catch { }
+            }
 
             spriteBatch.GraphicsDevice.Clear(Color.DimGray);
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
             if (_font != null)
             {
@@ -132,6 +165,16 @@ namespace PPH
                 spriteBatch.DrawString(_font, "Last Mouse Click: " + (_lastMouseClick?.ToString() ?? "-"), new Vector2(40, 140), Color.Yellow);
                 spriteBatch.DrawString(_font, "Last Touch: " + (_lastTouch?.ToString() ?? "-"), new Vector2(40, 170), Color.Yellow);
                 spriteBatch.DrawString(_font, _info, new Vector2(40, 210), Color.LightGreen);
+                if (!string.IsNullOrEmpty(_hmmInfo))
+                {
+                    var lines = _hmmInfo.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                    var y = 240f;
+                    foreach (var line in lines)
+                    {
+                        spriteBatch.DrawString(_font, line, new Vector2(40, y), Color.White);
+                        y += 24f;
+                    }
+                }
 
                 // Отрисовка логотипа (если доступен)
                 if (_logo != null)
@@ -139,6 +182,27 @@ namespace PPH
                     var pos = new Vector2(40, 260);
                     spriteBatch.Draw(_logo, pos, Color.White);
                     spriteBatch.DrawString(_font, "iologo.png loaded via mgcb", pos + new Vector2(0, _logo.Height + 8), Color.LightGray);
+                }
+
+                // Тест: тайловая сетка и альфа-блендинг
+                if (_grid != null)
+                {
+                    var origin = new Vector2(360, 240);
+                    int cols = 8;
+                    int rows = 5;
+                    for (int y = 0; y < rows; y++)
+                    {
+                        for (int x = 0; x < cols; x++)
+                        {
+                            var p = origin + new Vector2(x * _grid.Width, y * _grid.Height);
+                            spriteBatch.Draw(_grid, p, Color.White);
+                        }
+                    }
+                    if (_cellYel != null) spriteBatch.Draw(_cellYel, origin + new Vector2(_grid.Width * 2, _grid.Height * 2), Color.White);
+                    if (_cellRed != null) spriteBatch.Draw(_cellRed, origin + new Vector2(_grid.Width * 2 + 10, _grid.Height * 2 + 8), Color.White * 0.5f);
+                    if (_cellSel != null) spriteBatch.Draw(_cellSel, origin + new Vector2(_grid.Width * 3, _grid.Height * 1), Color.White);
+
+                    spriteBatch.DrawString(_font, "Grid + alpha blend test", origin + new Vector2(0, rows * _grid.Height + 8), Color.LightGray);
                 }
 
                 // Статус аудио
