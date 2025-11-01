@@ -136,6 +136,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="GameProcess.cs" />
     <Compile Include="HmmReader.cs" />
+    <Compile Include="RuntimeAssets.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="ViewManager.cs" />
     <Compile Include="MenuView.cs" />
@@ -210,6 +211,14 @@
   <ItemGroup>
     <!-- Включаем все игровые данные из папки Data в пакет и вывод -->
     <Content Include="Data\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <!-- Включаем карты из папки Maps -->
+    <Content Include="Maps\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <!-- Конфиг PalmHeroes.cfg как контент -->
+    <Content Include="PalmHeroes.cfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

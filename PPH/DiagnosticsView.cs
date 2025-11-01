@@ -171,7 +171,14 @@ namespace PPH
                     var y = 240f;
                     foreach (var line in lines)
                     {
-                        spriteBatch.DrawString(_font, line, new Vector2(40, y), Color.White);
+                        try
+                        {
+                            spriteBatch.DrawString(_font, line, new Vector2(40, y), Color.White);
+                        }
+                        catch 
+                        {
+                            spriteBatch.DrawString(_font, "wrong symbols in line", new Vector2(40, y), Color.White);
+                        }
                         y += 24f;
                     }
                 }

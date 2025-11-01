@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Threading.Tasks;
+using System;
 
 namespace PPH
 {
@@ -14,6 +15,8 @@ namespace PPH
         private ushort? _mapW;
         private ushort? _mapH;
         private string _hdrInfo;
+        private Task<Texture2D> _loadSurfTask;
+        private Texture2D _surfTiles;
 
         public OverlandView(ViewManager mgr)
         {
@@ -30,15 +33,35 @@ namespace PPH
             }
             else if (_loadHeaderTask.IsCompleted && (_mapW == null || _mapH == null))
             {
+                HmmHeader hdr = default;
+
                 try
                 {
-                    var hdr = _loadHeaderTask.Result;
-                    _mapW = hdr.Width;
-                    _mapH = hdr.Height;
-                    _hdrInfo = $"Map: {hdr.Name} ({hdr.FileVersion}) by {hdr.Author}";
+                    hdr = _loadHeaderTask.Result;
+                    if (hdr.Width == 0 || hdr.Height == 0)
+                    {
+                        _mapW = null;
+                        _mapH = null;
+                    }
+                    else
+                    {
+                        _mapW = hdr.Width;
+                        _mapH = hdr.Height;
+                    }
+
+                    var fmt = hdr.ParseStatus == "Unknown" ? "Unknown" : (hdr.IsEditorMap ? "EMAP" : "GMAP");
+                    var verHex = $"0x{hdr.Version:X}";
+                    _hdrInfo = $"Format: {fmt} {verHex} | Map: {hdr.Name} ({hdr.FileVersion}) by {hdr.Author}";
                 }
-                catch { }
+                catch 
+                {
+                    _mapW = null;
+                    _mapH = null;
+                    _hdrInfo = $"Format: Unknown 0x0 | Map: - (-) by -";
+                }
             }
+
+            // Загрузка SurfTiles переносится в Draw, где доступен GraphicsDevice
         }
 
         public void OnInput(InputState input)
@@ -74,6 +97,19 @@ namespace PPH
                 catch { }
             }
 
+            // Ленивая загрузка тайлсета поверхности из PNG (без XNB), нужна GraphicsDevice
+            if (_surfTiles == null)
+            {
+                if (_loadSurfTask == null)
+                {
+                    _loadSurfTask = RawAssetLoader.LoadTextureAsync(spriteBatch.GraphicsDevice, "Data/Resources/hmm/GFX/Common/SurfTiles.png");
+                }
+                else if (_loadSurfTask.IsCompleted)
+                {
+                    try { _surfTiles = _loadSurfTask.Result; } catch { }
+                }
+            }
+
             spriteBatch.GraphicsDevice.Clear(Color.DarkGreen);
             spriteBatch.Begin();
             if (_font != null)
@@ -82,38 +118,24 @@ namespace PPH
                 spriteBatch.DrawString(_font, "[Esc] Back to Menu", new Vector2(40, 80), Color.LightGray);
                 spriteBatch.DrawString(_font, "[B] Enter Battle", new Vector2(40, 110), Color.LightGray);
 
+                // Размер карты: всегда выводим строку, неизвестный размер отображаем явно
+                var sizeLine = (_mapW != null && _mapH != null) ? $"Map size: {_mapW} x {_mapH}" : "Map size: Unknown";
+                spriteBatch.DrawString(_font, sizeLine, new Vector2(40, 140), Color.Yellow);
+
+                if (!string.IsNullOrEmpty(_hdrInfo))
+                    spriteBatch.DrawString(_font, _hdrInfo, new Vector2(40, 165), Color.LightGray);
+
+                // Отрисовка одного тайла из SurfTiles.png только если известен размер (как признак корректного заголовка)
                 if (_mapW != null && _mapH != null)
                 {
-                    spriteBatch.DrawString(_font, $"Map size: {_mapW} x {_mapH}", new Vector2(40, 140), Color.Yellow);
-                    if (!string.IsNullOrEmpty(_hdrInfo))
-                        spriteBatch.DrawString(_font, _hdrInfo, new Vector2(40, 165), Color.LightGray);
-
-                    // Простейшая сетка по метрикам карты
-                    int cell = 10; // базовый размер клетки для визуализации
+                    int tile = 32; // временный размер тайла
                     int originX = 40;
                     int originY = 200;
-                    int wpx = cell * _mapW.Value;
-                    int hpx = cell * _mapH.Value;
-
-                    if (_pixel != null)
+                    if (_surfTiles != null)
                     {
-                        // Вертикальные линии
-                        for (int x = 0; x <= _mapW.Value; x++)
-                        {
-                            int xp = originX + x * cell;
-                            spriteBatch.Draw(_pixel, new Rectangle(xp, originY, 1, hpx), Color.White * 0.35f);
-                        }
-                        // Горизонтальные линии
-                        for (int y = 0; y <= _mapH.Value; y++)
-                        {
-                            int yp = originY + y * cell;
-                            spriteBatch.Draw(_pixel, new Rectangle(originX, yp, wpx, 1), Color.White * 0.35f);
-                        }
-                        // Рамка
-                        spriteBatch.Draw(_pixel, new Rectangle(originX, originY, wpx, 1), Color.White);
-                        spriteBatch.Draw(_pixel, new Rectangle(originX, originY + hpx, wpx, 1), Color.White);
-                        spriteBatch.Draw(_pixel, new Rectangle(originX, originY, 1, hpx), Color.White);
-                        spriteBatch.Draw(_pixel, new Rectangle(originX + wpx, originY, 1, hpx), Color.White);
+                        var src = new Rectangle(0, 0, Math.Min(tile, _surfTiles.Width), Math.Min(tile, _surfTiles.Height));
+                        var dst = new Rectangle(originX, originY, tile, tile);
+                        spriteBatch.Draw(_surfTiles, dst, src, Color.White);
                     }
                 }
             }
@@ -121,4 +143,3 @@ namespace PPH
         }
     }
 }
-
