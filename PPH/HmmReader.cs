@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
@@ -64,13 +65,10 @@ namespace PPH
 
         public static async Task<HmmHeader> ReadHeaderAsync(string relativePath = "Data/xl.hmm")
         {
-            // Пытаемся открыть из LocalFolder, иначе читаем из пакета
+            // Читаем ТОЛЬКО из LocalFolder. Фоллбек на пакет удалён.
             StorageFile file = await RuntimeAssets.TryGetLocalFileAsync(relativePath);
             if (file == null)
-            {
-                var uri = new Uri("ms-appx:///" + relativePath.Replace("\\", "/"));
-                file = await StorageFile.GetFileFromApplicationUriAsync(uri);
-            }
+                throw new FileNotFoundException("Local asset not found in LocalFolder: " + relativePath);
             using (IRandomAccessStream stream = await file.OpenReadAsync())
             {
                 var reader = new DataReader(stream);

@@ -137,6 +137,7 @@
     <Compile Include="GameProcess.cs" />
     <Compile Include="HmmReader.cs" />
     <Compile Include="RuntimeAssets.cs" />
+    <Compile Include="PackIndexReader.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="ViewManager.cs" />
     <Compile Include="MenuView.cs" />
@@ -147,6 +148,8 @@
     <Compile Include="InputRouter.cs" />
     <Compile Include="DiagnosticsView.cs" />
     <Compile Include="RawAssetLoader.cs" />
+    <Compile Include="MapInfo.cs" />
+    <Compile Include="GameWorld.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -220,6 +223,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\game.sfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\objects.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <!-- Включаем карты из папки Maps -->

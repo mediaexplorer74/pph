@@ -9,6 +9,7 @@ namespace PPH
     public static class RuntimeAssets
     {
         static string Normalize(string path) => path.Replace("\\", "/");
+        const string CacheVersion = "1"; // версия схемы кэша/распаковки
 
         public static async Task DeployAsync()
         {
@@ -18,6 +19,8 @@ namespace PPH
             await EnsureFolderAsync(local, "Data");
             await EnsureFolderAsync(local, "Maps");
             await EnsureFolderAsync(local, "Save");
+            await EnsureFolderAsync(local, "Cache");
+            await EnsureFolderAsync(local, "Cache");
 
             // Пакеты из Data: перезаписываем на каждую установку/обновление
             await CopyFromPackageToLocalAsync("Data/fonts.dat", "Data/fonts.dat", overwrite: true);
@@ -32,6 +35,47 @@ namespace PPH
 
             // Конфиг: создаём по умолчанию, если не существует
             await CopyFromPackageToLocalAsync("PalmHeroes.cfg", "PalmHeroes.cfg", overwrite: false);
+        }
+
+        // Прототип распаковки: проверка наличия паков и запись маркера версии
+        public static async Task UnpackAsync()
+        {
+            var local = ApplicationData.Current.LocalFolder;
+            var cache = await local.CreateFolderAsync("Cache", CreationCollisionOption.OpenIfExists);
+
+            // Если версия уже совпадает — пропускаем
+            try
+            {
+                var verItem = await cache.TryGetItemAsync(".version") as StorageFile;
+                if (verItem != null)
+                {
+                    var text = await FileIO.ReadTextAsync(verItem);
+                    if (text.Trim() == CacheVersion) return;
+                }
+            }
+            catch { /* игнорируем ошибки чтения */ }
+
+            // Валидация магик-байт в паках, если доступны в LocalFolder
+            try { await ValidateMagicIfExists("Data/game.gfx"); } catch { }
+            try { await ValidateMagicIfExists("Data/game.pix"); } catch { }
+            try { await ValidateMagicIfExists("Data/game.sfx"); } catch { }
+            try { await ValidateMagicIfExists("Data/fonts.dat"); } catch { }
+            try { await ValidateMagicIfExists("Data/objects.dat"); } catch { }
+
+            // Пока прототип: только помечаем версию кэша без фактической распаковки
+            try
+            {
+                var versionFile = await cache.CreateFileAsync(".version", CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(versionFile, CacheVersion);
+            }
+            catch { /* игнорируем запись маркера при ошибке */ }
+        }
+
+        static async Task ValidateMagicIfExists(string localRelativePath)
+        {
+            var file = await TryGetLocalFileAsync(localRelativePath);
+            if (file == null) return;
+            await PackIndexReader.ValidateMagicAsync(file);
         }
 
         static async Task EnsureFolderAsync(StorageFolder root, string subfolder)
@@ -91,4 +135,3 @@ namespace PPH
         }
     }
 }
-

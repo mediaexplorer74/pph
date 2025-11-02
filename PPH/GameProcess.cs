@@ -14,6 +14,9 @@ namespace PPH
     public class GameProcess
     {
         private readonly ViewManager _mgr;
+        private bool _goToMainMenu;
+        private bool _started;
+        public GameWorld World { get; private set; }
 
         public GameState State { get; private set; }
 
@@ -31,7 +34,9 @@ namespace PPH
         public void StartOverland()
         {
             State = GameState.Overland;
-            _mgr.Replace(new OverlandView(_mgr));
+            // Если мир уже создан, передадим его в OverlandView, иначе вью загрузит заголовок карты лениво
+            _mgr.Replace(new OverlandView(_mgr, null, World));
+            _started = true;
         }
 
         public void EnterBattle()
@@ -43,7 +48,7 @@ namespace PPH
         public void ExitBattleToOverland()
         {
             State = GameState.Overland;
-            _mgr.Replace(new OverlandView(_mgr));
+            _mgr.Replace(new OverlandView(_mgr, null, World));
         }
 
         public void OpenDiagnostics()
@@ -51,6 +56,62 @@ namespace PPH
             State = GameState.Diagnostics;
             _mgr.Replace(new DiagnosticsView(_mgr));
         }
+
+        // --- Перенос каркаса из iGame ---
+        public void MainMenu()
+        {
+            _goToMainMenu = true;
+        }
+
+        public bool StartNewGame(string mapFilePath, bool newGame)
+        {
+            try
+            {
+                // Создаём скелет мира иинициализируем его на основе заголовка карты
+                var world = new GameWorld();
+                world.InitializeAsync(mapFilePath).GetAwaiter().GetResult();
+                World = world;
+
+                State = GameState.Overland;
+                _started = true;
+                _mgr.Replace(new OverlandView(_mgr, mapFilePath, World));
+                return true;
+            }
+            catch
+            {
+                // Если что-то пошло не так при загрузке карты — вернёмся в меню
+                World = null;
+                _started = false;
+                GoToMenu();
+                return false;
+            }
+        }
+
+        public void ExitGame(bool changeView)
+        {
+            _started = false;
+            if (changeView)
+            {
+                GoToMenu();
+            }
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            if (_goToMainMenu)
+            {
+                _goToMainMenu = false;
+                ExitGame(true);
+                return;
+            }
+
+            if (!_started) return;
+
+            if (State == GameState.Overland)
+            {
+                // Место для обновления игрового мира (ход игрока, таймеры)
+                // Пока логика мира не перенесена, оставляем обновление вьюшки через ViewManager
+            }
+        }
     }
 }
-

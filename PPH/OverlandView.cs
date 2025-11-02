@@ -17,19 +17,32 @@ namespace PPH
         private string _hdrInfo;
         private Task<Texture2D> _loadSurfTask;
         private Texture2D _surfTiles;
+        private readonly string _mapPath;
+        private readonly GameWorld _world;
 
-        public OverlandView(ViewManager mgr)
+        public OverlandView(ViewManager mgr, string mapRelativePath = "Data/xl.hmm", GameWorld world = null)
         {
             _mgr = mgr;
+            _mapPath = mapRelativePath;
+            _world = world;
         }
 
         public void Update(GameTime gameTime)
         {
             // TODO: таймеры, анимации, обновление карты
-            if (_loadHeaderTask == null)
+            if (_world != null && _world.Map != null && (_mapW == null || _mapH == null))
             {
-                // Ленивая загрузка заголовка xl.hmm (размеры карты)
-                _loadHeaderTask = HmmReader.ReadHeaderAsync("Data/xl.hmm");
+                // Используем уже инициализированный мир для вывода размеров
+                _mapW = _world.MapWidth;
+                _mapH = _world.MapHeight;
+                var fmt = _world.Map.IsEditorMap ? "EMAP" : "GMAP";
+                var verHex = $"0x{_world.Map.Version:X}";
+                _hdrInfo = $"Format: {fmt} {verHex} | Map: {_world.Map.Name} ({_world.Map.FileVersion}) by {_world.Map.Author}";
+            }
+            else if (_loadHeaderTask == null)
+            {
+                // Ленивая загрузка заголовка указанной карты
+                _loadHeaderTask = HmmReader.ReadHeaderAsync(_mapPath);
             }
             else if (_loadHeaderTask.IsCompleted && (_mapW == null || _mapH == null))
             {

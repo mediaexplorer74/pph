@@ -67,6 +67,8 @@ namespace PPH
                 {
                     // Перед созданием UI разворачиваем игровые данные в LocalFolder
                     try { await RuntimeAssets.DeployAsync(); } catch { }
+                    // Прототип распаковки: валидация паков и запись маркера версии
+                    try { await RuntimeAssets.UnpackAsync(); } catch { }
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
