@@ -8,10 +8,19 @@ namespace PPH
     {
         private readonly ViewManager _mgr;
         private SpriteFont _font;
+        private BattleResult _mockResult;
 
         public BattleView(ViewManager mgr)
         {
             _mgr = mgr;
+            // Заглушка результата боя: в дальнейшем будет формироваться из реальных данных
+            _mockResult = new BattleResult
+            {
+                AttackerVictory = true,
+                WinnerPlayerId = 0,
+                GoldDelta = 500,
+                Notes = "Mock battle result"
+            };
         }
 
         public void Update(GameTime gameTime) { }
@@ -22,7 +31,7 @@ namespace PPH
             var prev = input.PrevKeyboard;
             if (prev.IsKeyUp(Keys.Escape) && ks.IsKeyDown(Keys.Escape))
             {
-                if (_mgr.Process != null) _mgr.Process.ExitBattleToOverland();
+                if (_mgr.Process != null) _mgr.Process.ExitBattleToOverland(_mockResult);
                 else _mgr.Replace(new OverlandView(_mgr));
             }
         }

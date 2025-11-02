@@ -9,7 +9,7 @@ namespace PPH
         private readonly ViewManager _mgr;
         private SpriteFont _font;
         private Texture2D _selIcon;
-        private readonly string[] _items = { "Start Overland", "Diagnostics", "Exit" };
+        private readonly string[] _items = { "Start New Game", "Diagnostics", "Exit" };
         private int _sel = 0;
 
         public MenuView(ViewManager mgr)
@@ -30,8 +30,7 @@ namespace PPH
                 switch (_sel)
                 {
                     case 0:
-                        if (_mgr.Process != null) _mgr.Process.StartOverland();
-                        else _mgr.Replace(new OverlandView(_mgr));
+                        _mgr.Replace(new MapListView(_mgr));
                         break;
                     case 1:
                         if (_mgr.Process != null) _mgr.Process.OpenDiagnostics();

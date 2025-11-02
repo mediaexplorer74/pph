@@ -7,11 +7,52 @@ My fork of PPH-Native project for some micro-RnD
 ## Screenshots
 ![Logo](Images/sshot01.png)
 ![Logo](Images/sshot02.png)
-![Logo](Images/sshot03.png)
+
+## Design
+![Logo](Images/design01.png)
+![Logo](Images/design02.png)
+
 
 ## Status
 - Init phase of Windows Mobile - Windows Phone (UWP) porting
-- Full /Data folder (row files for maps, tiles, sprites, sound effects, etc.)
+
+
+
+## Where are we now
+
+# Stages +
+1) Базовый каркас
+- Создать C# `ViewManager` и интерфейсы `IGame`, `IView`.
+- Включить цикл `Update/Draw` и роутинг ввода к активной вьюшке.
+- Заглушки: Menu/Overland/Battle с минимальной отрисовкой.
+
+2) Контент и ресурсы =-
+- Переименовать `pheroes\\bin` → `AssetsRaw`/`ContentRaw`.
+- Описать импортёр/конвертер для графики/звука (по возможности XNB), временно — прямые загрузчики файлов из `AssetsRaw`.
+
+3) Игровая логика =-
+- Перенести `iGame.MainMenu/StartNewGame/ExitGame/Process` в C# стейт-машину.
+- Перенести обработчики ввода (`OnKeyDown/OnKeyUp`) и таймерные события.
+- Поднять базовый оверленд (карта, скролл, выделение) без боя.
+
+4) UI и взаимодействия -
+- Портировать `iPopupView`, диалоги, тултипы.
+- Текст/шрифты: заменить `iDibFont` на `SpriteFont` и/или отрисовку bitmap-фонтами.
+
+5) Бой и AI -
+- Перенести боевой экран, инициативу, действия, эффекты.
+- Восстановить базовый AI передвижений/решений.
+
+6) Сохранения и совместимость -
+- Формат сейвов: определить совместимость/миграцию.
+- Настроить пути данных UWP и разрешения.
+
+7) Тестирование и полировка -
+- Модульные проверки ключевых систем (ввод/рендер/звук).
+- Валидация производительности и корректности логики.
+
+## Main current problem
+- Game Cache (LocalStorage - LocalState - Cache) is empty (no unpacked maps, etc.)
 
 ## Credits
 

@@ -17,19 +17,37 @@ namespace PPH
         private string _hdrInfo;
         private Task<Texture2D> _loadSurfTask;
         private Texture2D _surfTiles;
+        private readonly string _mapPath;
+        private readonly GameWorld _world;
+        private int _camX = 40;
+        private int _camY = 200;
 
-        public OverlandView(ViewManager mgr)
+        public OverlandView(ViewManager mgr, string mapRelativePath = "Data/xl.hmm", GameWorld world = null)
         {
             _mgr = mgr;
+            _mapPath = mapRelativePath;
+            _world = world;
         }
 
         public void Update(GameTime gameTime)
         {
             // TODO: таймеры, анимации, обновление карты
-            if (_loadHeaderTask == null)
+            if (_world != null && _world.Map != null && (_mapW == null || _mapH == null))
             {
-                // Ленивая загрузка заголовка xl.hmm (размеры карты)
-                _loadHeaderTask = HmmReader.ReadHeaderAsync("Data/xl.hmm");
+                // Используем уже инициализированный мир для вывода размеров
+                _mapW = _world.MapWidth;
+                _mapH = _world.MapHeight;
+                // Восстановим камеру при входе в оверленд
+                _camX = _world.CameraX;
+                _camY = _world.CameraY;
+                var fmt = _world.Map.IsEditorMap ? "EMAP" : "GMAP";
+                var verHex = $"0x{_world.Map.Version:X}";
+                _hdrInfo = $"Format: {fmt} {verHex} | Map: {_world.Map.Name} ({_world.Map.FileVersion}) by {_world.Map.Author}";
+            }
+            else if (_loadHeaderTask == null)
+            {
+                // Ленивая загрузка заголовка указанной карты
+                _loadHeaderTask = HmmReader.ReadHeaderAsync(_mapPath);
             }
             else if (_loadHeaderTask.IsCompleted && (_mapW == null || _mapH == null))
             {
@@ -75,6 +93,12 @@ namespace PPH
             }
             if (prev.IsKeyUp(Keys.B) && ks.IsKeyDown(Keys.B))
             {
+                // Сохраняем позицию камеры в мире перед входом в бой
+                if (_world != null)
+                {
+                    _world.CameraX = _camX;
+                    _world.CameraY = _camY;
+                }
                 if (_mgr.Process != null) _mgr.Process.EnterBattle();
                 else _mgr.Replace(new BattleView(_mgr));
             }
@@ -129,13 +153,29 @@ namespace PPH
                 if (_mapW != null && _mapH != null)
                 {
                     int tile = 32; // временный размер тайла
-                    int originX = 40;
-                    int originY = 200;
+                    int originX = _camX;
+                    int originY = _camY;
                     if (_surfTiles != null)
                     {
                         var src = new Rectangle(0, 0, Math.Min(tile, _surfTiles.Width), Math.Min(tile, _surfTiles.Height));
                         var dst = new Rectangle(originX, originY, tile, tile);
                         spriteBatch.Draw(_surfTiles, dst, src, Color.White);
+                    }
+                    // Вывод системной даты игры: месяц/неделя/день
+                    if (_world != null)
+                    {
+                        uint days = (_world.CurrentDay > 0) ? _world.CurrentDay - 1 : 0;
+                        int month = (int)(days / 28) + 1;
+                        int week = (int)((days % 28) / 7) + 1;
+                        int day = (int)(days % 7) + 1;
+                        spriteBatch.DrawString(_font, $"Month: {month} Week: {week} Day: {day}", new Vector2(40, 20), Color.Green);
+                    }
+                    // Короткая сводка о результате последнего боя (если есть)
+                    if (_world != null && _world.LastBattleResult != null)
+                    {
+                        var br = _world.LastBattleResult;
+                        string txt = br.AttackerVictory ? "Battle: Attacker victory" : "Battle: Defender victory";
+                        spriteBatch.DrawString(_font, txt, new Vector2(40, 46), Color.Orange);
                     }
                 }
             }

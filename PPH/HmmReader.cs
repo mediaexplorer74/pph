@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
@@ -17,6 +19,11 @@ namespace PPH
         public string FileVersion { get; set; } = string.Empty;
         public string Author { get; set; } = string.Empty;
         public uint CurrentDay { get; set; }
+        public ushort GameMode { get; set; }
+        public sbyte Difficulty { get; set; }
+        public ushort PlayerCount { get; set; }
+        public ushort CurrentPlayerId { get; set; }
+        public List<PlayerInfo> Players { get; set; } = new List<PlayerInfo>();
         public ushort Width { get; set; }
         public ushort Height { get; set; }
         public bool IsEditorMap { get; set; }
@@ -64,13 +71,10 @@ namespace PPH
 
         public static async Task<HmmHeader> ReadHeaderAsync(string relativePath = "Data/xl.hmm")
         {
-            // Пытаемся открыть из LocalFolder, иначе читаем из пакета
+            // Читаем ТОЛЬКО из LocalFolder. Фоллбек на пакет удалён.
             StorageFile file = await RuntimeAssets.TryGetLocalFileAsync(relativePath);
             if (file == null)
-            {
-                var uri = new Uri("ms-appx:///" + relativePath.Replace("\\", "/"));
-                file = await StorageFile.GetFileFromApplicationUriAsync(uri);
-            }
+                throw new FileNotFoundException("Local asset not found in LocalFolder: " + relativePath);
             using (IRandomAccessStream stream = await file.OpenReadAsync())
             {
                 var reader = new DataReader(stream);
@@ -170,29 +174,30 @@ namespace PPH
 
                     // Misc fields we skip but read to advance
                     hdr.CurrentDay = reader.ReadUInt32(); // curDay
-                    ushort gameMode = reader.ReadUInt16();
-                    sbyte difLvl = unchecked((sbyte)reader.ReadByte());
+                    hdr.GameMode = reader.ReadUInt16();
+                    hdr.Difficulty = unchecked((sbyte)reader.ReadByte());
 
                     // Players block (skip)
-                    ushort pCount = reader.ReadUInt16();
-                    for (int i = 0; i < pCount; i++)
+                    hdr.PlayerCount = reader.ReadUInt16();
+                    for (int i = 0; i < hdr.PlayerCount; i++)
                     {
+                        var p = new PlayerInfo();
                         // sint8 playerId + 3x uint8
-                        reader.ReadByte(); // playerId
-                        reader.ReadByte(); // nation
-                        reader.ReadByte(); // playerTypeMask
-                        reader.ReadByte(); // playerType
+                        p.Id = reader.ReadByte();
+                        p.Nation = reader.ReadByte();
+                        p.TypeMask = reader.ReadByte();
+                        p.Type = reader.ReadByte();
                         // iMineralSet: 7 x sint32
-                        for (int m = 0; m < 7; m++) reader.ReadInt32();
+                        for (int m = 0; m < 7; m++) p.Resources[m] = reader.ReadInt32();
                         // curHeroId, curCastleIdx
-                        reader.ReadUInt16();
-                        reader.ReadUInt16();
+                        p.HeroId = reader.ReadUInt16();
+                        p.CastleIdx = reader.ReadUInt16();
                         // keys
-                        reader.ReadByte();
+                        p.Keys = reader.ReadByte();
+                        hdr.Players.Add(p);
                     }
 
-                    // Current player id (skip value)
-                    reader.ReadUInt16();
+                    hdr.CurrentPlayerId = reader.ReadUInt16();
 
                     // Map metrics
                     hdr.Width = reader.ReadUInt16();
@@ -215,6 +220,11 @@ namespace PPH
                     hdr.FileVersion = string.Empty;
                     hdr.Author = string.Empty;
                     hdr.CurrentDay = 0;
+                    hdr.GameMode = 0;
+                    hdr.Difficulty = 0;
+                    hdr.PlayerCount = 0;
+                    hdr.CurrentPlayerId = 0;
+                    hdr.Players = new List<PlayerInfo>();
                     hdr.Width = 0;
                     hdr.Height = 0;
                     return hdr;

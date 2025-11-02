@@ -37,6 +37,7 @@ namespace PPH
 
         protected override void Update(GameTime gameTime)
         {
+            _process?.Update(gameTime);
             _viewManager?.Update(gameTime);
             base.Update(gameTime);
         }
