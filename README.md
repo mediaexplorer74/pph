@@ -1,4 +1,4 @@
-﻿# pph (Pocket Palm Heroes)
+﻿# PPH (Pocket Palm Heroes) v1.0-pre-pre-pre-alpha - master branch
 
 ![Logo](Images/logo.png)
 
@@ -6,8 +6,6 @@ My fork of PPH-Native project for some micro-RnD
 
 ## Screenshots
 ![Logo](Images/sshot01.png)
-![Logo](Images/sshot02.png)
-![Logo](Images/sshot03.png)
 
 ## Status
 - Init phase of Windows Mobile - Windows Phone (UWP) porting
@@ -35,5 +33,5 @@ As is. No support. RnD only.
 
 ## ..
 
-[m][e] 2025
+[m][e] Nov, 2 2025
 
